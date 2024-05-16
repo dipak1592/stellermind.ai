@@ -1,0 +1,106 @@
+.swiper {
+  padding-bottom: 110px !important;
+}
+.swiper-slide {
+  width: 470px !important;
+  height: auto !important;
+ 
+}
+.slide-testimonial{
+  box-shadow: 3px 3px 3px 3px #88a9eb35;
+}
+@media only screen and (max-width: 640px) {
+  .swiper-wrapper .swiper-slide {
+    width: 80% !important;
+  }
+}
+.slider-controler .slider-arrow {
+  color: rgba(255, 255, 255, 0.851) !important;
+}
+.slider-controler .swiper-button-prev:after {
+  font-size: 15px !important;
+}
+.slider-controler .swiper-button-next:after {
+  font-size: 15px !important;
+}
+.client-image {
+  height: 50px;
+  width: 50px;
+}
+.swiper-button-prev {
+  top: 85% !important;
+  left: 46.5% !important;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.311);
+  border: 1px solid rgba(128, 128, 128, 0.444);
+  height: 35px !important;
+  width: 32px !important;
+}
+.swiper-button-prev:hover {
+  /* background-color: rgba(0, 0, 255, 0.431); */
+  border-color: white;
+}
+.swiper-button-next:hover {
+  /* background-color: rgba(0, 0, 255, 0.431); */
+  border-color: white;
+}
+.swiper-button-next {
+  top: 85% !important;
+  right: 46.5% !important;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.311);
+  border: 1px solid rgba(128, 128, 128, 0.444);
+  height: 35px !important;
+  width: 32px !important;
+}
+@media only screen and (max-width: 1280px) {
+    .swiper-button-prev {
+      left: 45.5% !important;
+    }
+    .swiper-button-next {
+      right: 45.5% !important;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .swiper-button-prev {
+      left: 45% !important;
+    }
+    .swiper-button-next {
+      right: 45% !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .swiper-button-prev {
+      left: 44% !important;
+    }
+    .swiper-button-next {
+      right: 44% !important;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    .swiper {
+      padding-bottom: 150px !important;
+    }
+    .swiper-button-prev {
+      left: 41% !important;
+      top: 87% !important;
+    }
+    .swiper-button-next {
+      right: 41% !important;
+      top: 87% !important;
+    }
+  }
+
+  @media only screen and (max-width: 426px) {
+    .swiper {
+      padding-bottom: 150px !important;
+    }
+    .swiper-button-prev {
+      left: 39.3% !important;
+    }
+    .swiper-button-next {
+      right: 39.3% !important;
+    }
+  }

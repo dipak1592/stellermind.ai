@@ -38,7 +38,7 @@ function Footer() {
                 solutions for businesses of all sizes.
               </p>
               <div className="mb-[10px] flex items-center gap-3">
-                <Link href={"https://www.linkedin.com/company/betasourcetech"} target="_blank" rel="noopener">
+                <Link href={"https://www.linkedin.com/company/stellarmindai"} target="_blank" rel="noopener">
                 <span
                   className="p-2 cursor-pointer inline-flex items-center
         rounded-full bg-[#3b83f67d] text-xl hover:text-gray-100 hover:bg-black
@@ -48,7 +48,7 @@ function Footer() {
                 </span>
                 </Link>
                 
-                <Link href={"https://twitter.com/BetasourceT"} target="_blank" rel="noopener">
+                <Link href={"https://twitter.com/StellarMind_ai"} target="_blank" rel="noopener">
                 <span
                   className="p-2 cursor-pointer inline-flex items-center
         rounded-full bg-[#3b83f67d] text-xl hover:text-gray-100 hover:bg-black
@@ -57,7 +57,7 @@ function Footer() {
                   <FaSquareXTwitter />
                 </span>
                 </Link>
-                <Link href={"https://www.facebook.com/betasource.techofficial"} target="_blank" rel="noopener">
+                <Link href={"https://www.facebook.com/StellarMind/"} target="_blank" rel="noopener">
                 <span
                   className="p-2 cursor-pointer inline-flex items-center
         rounded-full bg-[#3b83f67d] text-xl hover:text-gray-100 hover:bg-black
@@ -66,7 +66,7 @@ function Footer() {
                   <FaFacebook />
                 </span>
                 </Link>
-                <Link href={"https://in.pinterest.com/betasourcetech/"} target="_blank" rel="noopener">
+                <Link href={"https://in.pinterest.com/StellarMind_ai/"} target="_blank" rel="noopener">
                 <span
                   className="p-2 cursor-pointer inline-flex items-center
         rounded-full bg-[#3b83f67d] text-xl hover:text-gray-100 hover:bg-black
@@ -75,11 +75,11 @@ function Footer() {
                   <FaPinterest />
                 </span>
                 </Link>
-                <Link href={"https://www.instagram.com/betasource.tech/"} target="_blank" rel="noopener">
+                <Link href={"https://www.instagram.com/stellarmind_ai"} target="_blank" rel="noopener">
                 <span
                   className="p-2 cursor-pointer inline-flex items-center
         rounded-full bg-[#3b83f67d] text-xl hover:text-gray-100 hover:bg-black
-        duration-300 "
+        duration-300"
                 >
                   <GrInstagram />
                 </span>
@@ -145,8 +145,8 @@ function Footer() {
                 <div className="mb-[5px] flex gap-2 hover:text-blue-500 hover:font-semibold">
                 <span className="text-blue-500 "> <IoMdMail className="mt-[4px]" /></span>
                  
-                  <Link href="mailto:info@betasource.tech">
-                    info@betasource.tech
+                  <Link href="mailto:info@stellarmind.ai">
+                    info@stellarmind.ai
                   </Link>
                 </div>
               </div>

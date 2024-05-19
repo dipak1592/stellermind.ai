@@ -32,8 +32,8 @@ export default function Home() {
     <div className="bg-gradient-to-l from-black via-[#000000ad] to-transparent">
     <div className="grid container md:grid-cols-2 gap-3 ">
       <div className="relative py-[90px] text-white">
-        <h1 className="pb-3 text-[35px] xl:text-[50px] lg:text-[44px] md:text-[40px] sm:text-[40px] font-semibold">
-          {"Because without any"}<span className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}>
+        <h1 className="pb-3 text-[30px] xl:text-[50px] lg:text-[44px] md:text-[40px] font-semibold">
+          {"Because without any"} <br /><span className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}>
           {"Advanced tech "}
           </span>
         <br />

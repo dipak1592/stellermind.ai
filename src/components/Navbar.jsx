@@ -98,6 +98,18 @@ function Navbar() {
                   Portfolio
                 </Link>
               </div>
+              <div>
+                <Link
+                  href="/career"
+                  className={`${
+                    pathname === "/career"
+                      ? "text-blue-500 bg-[#ffffff0e] "
+                      : ""
+                  } md:text-[15px] lg:text-[18px] font-medium  hover:bg-[#ffffff0e] hover:text-blue-500 rounded-lg p-2`}
+                >
+                  Career
+                </Link>
+              </div>
             </div>
           </div>
           <Link href="/contact">
@@ -135,6 +147,12 @@ function Navbar() {
                 className="text-white block hover:bg-[#ffffff0e] hover:text-blue-600 rounded-lg p-2"
               >
                 Portfolio
+              </Link>
+              <Link
+                href="/career"
+                className="text-white block hover:bg-[#ffffff0e] hover:text-blue-600 rounded-lg p-2"
+              >
+                Career
               </Link>
               <div>
                 <div

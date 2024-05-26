@@ -5,7 +5,21 @@ import { MdEmojiObjects } from "react-icons/md";
 import Link from "next/link";
 import DynamicHeading from "@/components/DynamicHeading";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
-function Career() {
+async function getData() {
+  const res = await fetch(
+    `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/career/getposts`
+  );
+  if (!res.ok) {
+    console.log("failed to fetch data");
+  }
+  return res.json();
+}
+
+async function Career() {
+  const careerData = await getData();
+  if (!careerData || careerData.length === 0) {
+    return <>failed to fetch</>;
+  }
   return (
     <>
       <div className="grid container md:grid-cols-2 gap-[20px] ">
@@ -26,45 +40,47 @@ function Career() {
       <DynamicHeading FirstContent={"Current"} FirstsubContent={"Openings"} />
 
       <div className="container">
-        <div className=" hover:bg-black border border-gray-500 bg-gradient-to-r from-[#3b83f631] to-[#00800038] flex justify-between gap-5 flex-col  sm:text-[25px] md:text-[30px]  text-[18px] font-bold rounded-xl p-[30px]">
+      {careerData?.map((item, index) => {
+        
+        return (
+          <>
+            <div key={index} className="mb-[60px] hover:bg-black border border-gray-500 bg-gradient-to-r from-[#3b83f631] to-[#00800038] flex justify-between gap-5 flex-col  sm:text-[25px] md:text-[30px]  text-[18px] font-bold rounded-xl p-[30px]">
           <div>
             <span className="bg-gradient-to-r text-center from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">
-              {"Full Stack Developer"}
+              {item.name}
             </span>
             <div className="mt-6 font-normal text-[18px]">
-              <p className="flex gap-2 mb-3 text-white">
+              {
+                item.descPoints?.map((item,index)=>{
+                      return(
+                        <p key={index} className="flex gap-2 mb-3 text-white">
                 <span className="mt-1 text-[22px] text-blue-500">
                   <VscDebugBreakpointLog />
                 </span>
-                StellarMind is a leading and globally accepted IT consultant and
-                solution provider in AI/ML, IoT, cloud applications,
-                microservices, mobile apps, DevOps, And AR/VR technology.
+               {item}
               </p>
-              <p className="flex gap-2 mb-3 text-white">
-                <span className="mt-1 text-[22px] text-blue-500">
-                  <VscDebugBreakpointLog />
-                </span>
-                We specializes in developing software to help bring your vision
-                to life.
-              </p>
-              <p className="flex gap-2 mb-3 text-white">
-                <span className="mt-1 text-[22px] text-blue-500">
-                  <VscDebugBreakpointLog />
-                </span>
-                We have successfully built and delivered 127+ AI/ML, IoT and
-                Software development projects with utmost quality and support.
-              </p>
+                      )
+                })
+              }
+              
+              
             </div>
           </div>
 
           <div className=" flex justify-center">
-            <Link href={"/contact"}>
+            <Link href="mailto:hr@stellarmind.ai">
               <button className="flex  items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white  font-bold rounded">
                 Apply Now <FaArrowRightLong />
               </button>
             </Link>
           </div>
         </div>
+          </>
+        );
+      })}
+
+        {/* DynamicHeading */}
+       
 
         {/* static component */}
         <div className="mt-[60px] flex flex-col gap-3 items-center sm:text-[25px] md:text-[30px]  text-[18px] font-bold rounded-xl bg-[#1a1919ec] p-[30px]">
@@ -77,7 +93,7 @@ function Career() {
             </span>
           </div>
           <div className=" flex justify-center">
-            <Link href={"/contact"}>
+          <Link href="mailto:hr@stellarmind.ai">
               <button className="flex  items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white  font-bold rounded">
                 Apply Now <FaArrowRightLong />
               </button>

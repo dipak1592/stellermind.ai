@@ -8,7 +8,7 @@ variables:
   PM2_APP_NAME: "stellar"
   DEPLOY_SERVER: "65.2.9.239"
   DEPLOY_USER: "root"
-  DEPLOY_PATH: "/path/to/your/app"
+  DEPLOY_PATH: "/usr/local/apache2/htdocs/stellarmind/releases/stellarmind_website"
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
 
 before_script:

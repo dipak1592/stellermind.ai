@@ -4,10 +4,10 @@ stages:
   - deploy
 
 variables:
-  APP_NAME: "your-app-name"
-  PM2_APP_NAME: "your-pm2-app-name"
-  DEPLOY_SERVER: "your.server.ip"
-  DEPLOY_USER: "your-username"
+  APP_NAME: "stellar"
+  PM2_APP_NAME: "stellar"
+  DEPLOY_SERVER: "65.2.9.239"
+  DEPLOY_USER: "root"
   DEPLOY_PATH: "/path/to/your/app"
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
 

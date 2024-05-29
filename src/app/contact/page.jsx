@@ -129,9 +129,8 @@ function Contact() {
     }
   };
   return (
-    
-    <div className="container">
-      <section className="pb-[60px] font-semibold text-white">
+    <>
+    <section className="pb-[60px] font-semibold text-white">
         <TubeLight />
         <div className="relative flex justify-center z-[5] pt-[60px]">
           <h1
@@ -143,6 +142,8 @@ function Contact() {
           </h1>
         </div>
       </section>
+    <div className="container">
+      
       <div className="relative grid gap-5 grid-cols-1 md:grid-cols-2">
         <div className="mt-[50px] px-[20px] py-[25px] rounded-[25px] bg-[#1a1919ec]">
           <div className="flex items-center justify-center gap-2">
@@ -586,6 +587,8 @@ function Contact() {
         
       
     </div>
+    </>
+    
   );
 }
 

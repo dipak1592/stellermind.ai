@@ -110,6 +110,18 @@ function Navbar() {
                   Career
                 </Link>
               </div>
+              <div>
+                <Link
+                  href="/blog"
+                  className={`${
+                    pathname === "/blog"
+                      ? "text-blue-500 bg-[#ffffff0e] "
+                      : ""
+                  } md:text-[15px] lg:text-[18px] font-medium  hover:bg-[#ffffff0e] hover:text-blue-500 rounded-lg p-2`}
+                >
+                  Blog
+                </Link>
+              </div>
             </div>
           </div>
           <Link href="/contact">
@@ -153,6 +165,12 @@ function Navbar() {
                 className="text-white block hover:bg-[#ffffff0e] hover:text-blue-600 rounded-lg p-2"
               >
                 Career
+              </Link>
+              <Link
+                href="/blog"
+                className="text-white block hover:bg-[#ffffff0e] hover:text-blue-600 rounded-lg p-2"
+              >
+                blog
               </Link>
               <div>
                 <div

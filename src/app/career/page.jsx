@@ -7,7 +7,7 @@ import DynamicHeading from "@/components/DynamicHeading";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 async function getData() {
   const res = await fetch(
-    `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/career/getposts`
+    `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/career/getposts`, { next: { revalidate: 60 } } 
   );
   if (!res.ok) {
     console.log("failed to fetch data");

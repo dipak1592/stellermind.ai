@@ -4,19 +4,24 @@ stages:
   - deploy
 
 variables:
-  APP_NAME: "your-app-name"
-  PM2_APP_NAME: "your-pm2-app-name"
-  DEPLOY_SERVER: "your.server.ip"
-  DEPLOY_USER: "your-username"
-  DEPLOY_PATH: "/path/to/your/app"
+  APP_NAME: "stellar"
+  PM2_APP_NAME: "stellar"
+  DEPLOY_SERVER: "65.2.9.239"
+  DEPLOY_USER: "root"
+  DEPLOY_PATH: "/usr/local/apache2/htdocs/stellarmind/releases/stellarmind_website"
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
 
 before_script:
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - 'which ssh-agent || ( apt-get update -y && apt-get install -y openssh-client rsync )'
+  - apt-get update -y && apt-get install -y rsync
   - eval $(ssh-agent -s)
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
+  - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+  - apt-get install -y nodejs
+    # Ensure npm is installed
+  - npm -v
 
 install_dependencies:
   stage: install
@@ -33,14 +38,15 @@ build:
   artifacts:
     paths:
       - .next/
+      - BUILD_ID
 
 deploy:
   stage: deploy
   script:
     - echo "Deploying to server..."
-    - ssh $DEPLOY_USER@$DEPLOY_SERVER "mkdir -p $DEPLOY_PATH"
-    - rsync -av --delete-after --exclude=node_modules --exclude=.git . $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH
-    - ssh $DEPLOY_USER@$DEPLOY_SERVER "
+    - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "mkdir -p $DEPLOY_PATH"
+    - rsync -av --delete-after --exclude=node_modules --exclude=.git -e "ssh -o StrictHostKeyChecking=no" . $DEPLOY_USER@$DEPLOY_SERVER:$DEPLOY_PATH
+    - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "
         cd $DEPLOY_PATH &&
         npm install --production &&
         npm run build &&

@@ -8,7 +8,8 @@ import { LiaHandPointRight } from "react-icons/lia";
 import { RxCross2 } from "react-icons/rx";
 async function getData(slug) {
   const res = await fetch(
-    `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/portfolio/getposts?slug=${slug}`, { next: { revalidate: 60 } }
+    `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/portfolio/getposts?slug=${slug}`,
+    { next: { revalidate: 60 } }
   );
 
   if (!res.ok) {
@@ -18,18 +19,25 @@ async function getData(slug) {
 }
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
-  const slug = params.slug
- 
+  const slug = params.slug;
+
   // fetch data
-  const data = await fetch(`https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/portfolio/getposts?slug=${slug}`).then((res) => res.json())
- 
+  const data = await fetch(
+    `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/portfolio/getposts?slug=${slug}`
+  ).then((res) => res.json());
+
   return {
     title: data[0]?.name,
-    description : data[0]?.taglineDesc,
+    description: data[0]?.taglineDesc,
     openGraph: {
-      images: [data[0]?.featureImage,data[0]?.projectImg1,data[0]?.projectImg2,data[0]?.projectImg3 ],
+      images: [
+        data[0]?.featureImage,
+        data[0]?.projectImg1,
+        data[0]?.projectImg2,
+        data[0]?.projectImg3,
+      ],
     },
-  }
+  };
 }
 export default async function page({ params }) {
   const { slug } = params;
@@ -246,22 +254,59 @@ export default async function page({ params }) {
                 </div>
               )
             )}
+
             {(data[0].category == "ai-ml" ||
               data[0].category == "ar" ||
               data[0].category == "unity") &&
-            data[0].youtube !== "" ? (
-              <div className="mt-[20px] bg-opacity-50 flex justify-center items-center ">
-                <div className=" text-white relative border bg-black border-gray-600 p-[30px] w-[600px] h-[400px]">
-                  {data[0].youtube && (
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={`${data[0].youtube}`}
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    ></iframe>
-                  )}
-                </div>
+            (data[0].youtube1 !== "" ||
+              data[0].youtube2 !== "" ||
+              data[0].youtube3 !== "") ? (
+              <div>
+                {data[0].youtube1 && (
+                  <div className="mt-[20px] bg-opacity-50 flex justify-center items-center ">
+                    <div className=" text-white relative border bg-black border-gray-600 p-[30px] w-[600px] h-[400px]">
+                      {data[0].youtube1 && (
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`${data[0].youtube1}`}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
+                      )}
+                    </div>
+                  </div>
+                )}
+                {data[0].youtube2 && (
+                  <div className="mt-[20px] bg-opacity-50 flex justify-center items-center ">
+                    <div className=" text-white relative border bg-black border-gray-600 p-[30px] w-[600px] h-[400px]">
+                      {data[0].youtube1 && (
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`${data[0].youtube2}`}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
+                      )}
+                    </div>
+                  </div>
+                )}
+                {data[0].youtube3 && (
+                  <div className="mt-[20px] bg-opacity-50 flex justify-center items-center ">
+                    <div className=" text-white relative border bg-black border-gray-600 p-[30px] w-[600px] h-[400px]">
+                      {data[0].youtube1 && (
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`${data[0].youtube3}`}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               ""

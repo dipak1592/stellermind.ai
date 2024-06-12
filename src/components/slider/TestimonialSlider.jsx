@@ -55,6 +55,12 @@ function TestimonialSlider() {
       name: "Bola Adejobi",
       designation: "CEO Gatekrasher",
     },
+    {
+      ytvideo: "",
+      text: "I very much appreciate ronak team's patience with me as we worked through the various technical challenges. His team was also willing to work with me late at night due to my crazy schedule.They also delivered an excellent product within my limited timeline.",
+      photo: "/testimonial/aaron.jpg",
+      name: "Aaron French",
+    },
   ];
   return (
     <>

@@ -2,7 +2,6 @@ stages:
   - install
   - build
   - deploy
-
 variables:
   APP_NAME: "stellar"
   PM2_APP_NAME: "stellar"
@@ -20,7 +19,7 @@ before_script:
   - chmod 700 ~/.ssh
   - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
   - apt-get install -y nodejs
-    # Ensure npm is installed
+    # Ensure npm is installed ok
   - npm -v
 
 install_dependencies:

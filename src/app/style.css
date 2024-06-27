@@ -125,3 +125,17 @@ a{
 .phone-input .react-tel-input .country-list .country.highlight{
   background-color: #5c6cff43;
 }
+
+/* =========================Blog conetent===================================== */
+
+.blogcontent h1,h2,h3,h4,h5,h6{
+  background: linear-gradient(to right, #5786ec, #10b981);
+  color: transparent; /* text-transparent */
+  -webkit-background-clip: text; /* bg-clip-text */
+  background-clip: text;
+}
+
+.blogcontent a{
+  color: #3b82f6;
+  font-weight: bold;
+}

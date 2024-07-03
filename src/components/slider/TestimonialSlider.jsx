@@ -22,13 +22,13 @@ function TestimonialSlider() {
       name: "Jorden Kelin",
       designation: "CEO Ghost PXL"
     },
-    {
-      ytvideo: "",
-      text: "We have been a customer of StellarMind for seven years. They are cost-effective, their work has been of high quality, efficient, consistent and reliable.",
-      photo: "/testimonial/Henry-11.jpg",
-      name: "Henry Pena",
-      designation: "Director, Pomanager, LLC",
-    },
+    // {
+    //   ytvideo: "",
+    //   text: "We have been a customer of StellarMind for seven years. They are cost-effective, their work has been of high quality, efficient, consistent and reliable.",
+    //   photo: "/testimonial/Henry-11.jpg",
+    //   name: "Henry Pena",
+    //   designation: "Director, Pomanager, LLC",
+    // },
     {
       ytvideo: "",
       text: "I have reviewed the code provided and I'm very pleased with the work your team delivered. It was exactly what I requested,Great Team.",
@@ -42,13 +42,14 @@ function TestimonialSlider() {
       name: "Maha Vangla",
       designation: "Director AOF Eng.",
     },
+    // {
+    //   ytvideo: "",
+    //   text: "I couldn't thank StellarMind more in terms of giving valuable suggestions. They were always available for discussion. The core strengths of StellarMind are their expertise, patience, and Dedicated team. ",
+    //   photo: "/testimonial/Tom.png",
+    //   name: "Tom Bryant",
+    //   designation: "CEO, Quickcam LLC",
+    // },
     {
-      ytvideo: "",
-      text: "I couldn't thank StellarMind more in terms of giving valuable suggestions. They were always available for discussion. The core strengths of StellarMind are their expertise, patience, and Dedicated team. ",
-      photo: "/testimonial/Tom.png",
-      name: "Tom Bryant",
-      designation: "CEO, Quickcam LLC",
-    },{
       ytvideo: "",
       text: "They understood our idea, had proper timelines, and offered innovative suggestions for our software. You can depend on their creativity, expertise, and reliable service to complete your project.",
       photo: "/testimonial/Bola.png",

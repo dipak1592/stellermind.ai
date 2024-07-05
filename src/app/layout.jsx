@@ -20,6 +20,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const schemaData = {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "name": "stellarmind.ai",
+    "url": "https://stellarmind.ai/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://stellarmind.ai/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
   return (
     <html lang="en">
       <head>
@@ -68,6 +79,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               gtag('config', 'G-G74J3H2F17');
             `,
           }}
+        />
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
       <body className={`${montserrat.className}`}>

@@ -1,0 +1,16 @@
+# robots.txt for https://stellarmind.ai/
+
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /private/
+Allow: /public/
+Allow: /images/
+
+# Disallow specific query parameters
+Disallow: /*?token=
+Disallow: /*?session=
+
+# Sitemap
+Sitemap: https://stellarmind.ai/sitemap.xml

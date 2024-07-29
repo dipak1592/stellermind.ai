@@ -413,7 +413,7 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                src={"/team/ronak.webp"}
+                src={"/team/default.svg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
@@ -458,7 +458,7 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                src={"/team/ronak.webp"}
+                src={"/team/krupa.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
@@ -473,7 +473,7 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                src={"/team/ronak.webp"}
+                 src={"/team/default.svg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
@@ -488,7 +488,22 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                src={"/team/ronak.webp"}
+                src={"/team/aayush.jpeg"}
+                className="rounded-2xl mb-[5px]"
+                width={250}
+                height={250}
+                alt=""
+              />
+              <h5 className=" text-[22px] font-bold text-white ">
+              Ayush Gupta
+              </h5>
+              <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
+              Senior AI/ML Engineer
+              </p>
+            </div>
+            <div className="md:col-span-1 col-span-2 flex flex-col items-center">
+            <Image
+                src={"/team/milan.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
@@ -534,7 +549,7 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                src={"/team/ronak.webp"}
+                 src={"/team/default.svg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}

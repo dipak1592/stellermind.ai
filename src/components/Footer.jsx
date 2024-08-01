@@ -183,11 +183,23 @@ function Footer() {
               </h3>
 
               <div className="text-[17px]">
-                <div className="mb-[5px] flex gap-2 hover:text-blue-500 hover:font-semibold">
-                  <span className="text-blue-500 ">
+                <div className="mb-[5px] flex items-center gap-2 hover:text-blue-500 hover:font-semibold">
+                  {/* <span className="text-blue-500 ">
                     <FaPhoneAlt className="mt-[4px] " />
+                  </span> */}
+                  <span>
+                  <Image src="/india-flag-icon.svg" width={20} height={20} alt="" />
                   </span>
                   <Link href="tel:+917863889382">+91 786 3889 382</Link>
+                </div>
+                <div className="mb-[5px] flex items-center gap-2 hover:text-blue-500 hover:font-semibold">
+                  {/* <span className="text-blue-500 ">
+                    <FaPhoneAlt className="mt-[4px] " />
+                  </span> */}
+                  <span>
+                  <Image src="/united-states-flag-icon.svg" width={20} height={20} alt="" />
+                  </span>
+                  <Link href="tel:+16506670749">+1(650)667-0749</Link>
                 </div>
                 <div className="mb-[5px] flex gap-2 hover:text-blue-500 hover:font-semibold">
                   <span className="text-blue-500 ">
@@ -200,7 +212,7 @@ function Footer() {
                   </Link>
                 </div>
               </div>
-              <div className="w-[100%] flex justify-center">
+              <div className="map">
               <WorldMap
                 width="100%"
                 color="#3b83f67d"

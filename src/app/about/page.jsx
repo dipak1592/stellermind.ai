@@ -189,7 +189,7 @@ export default function page() {
 
             <div className="md:col-span-1 col-span-2">
               <h5 className=" text-[25px] font-bold text-left text-blue-600 ">
-                Sanjay Gangotra
+                Sanjay  Gandotra
               </h5>
               <p className="text-left bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
                 CTO, Stellarmind.ai
@@ -342,6 +342,21 @@ export default function page() {
 
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 my-[30px] md:mx-[100px]  bg-[#0d0d0df4] text-white md:p-10 p-5 rounded-2xl">
+          <div className="md:col-span-1 col-span-2 flex flex-col items-center">
+              <Image
+                src={"/team/kiran.webp"}
+                className="rounded-2xl mb-[5px]"
+                width={250}
+                height={250}
+                alt=""
+              />
+               <h5 className=" text-[22px] font-bold text-white ">
+               Kiran Chaudhari
+              </h5>
+              <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
+              Talent Acquisition Lead
+              </p>
+            </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
               <Image
                 src={"/team/bde.jpg"}
@@ -372,21 +387,7 @@ export default function page() {
               Social Marketing Manager
               </p>
             </div>
-            <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-              <Image
-                src={"/team/kiran.webp"}
-                className="rounded-2xl mb-[5px]"
-                width={250}
-                height={250}
-                alt=""
-              />
-               <h5 className=" text-[22px] font-bold text-white ">
-               Kiran Chaudhari
-              </h5>
-              <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Talent Acquisition Lead
-              </p>
-            </div>
+           
         
           </div>
           <h4 className="heading text-[30px] font-semibold bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">
@@ -413,7 +414,7 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                src={"/team/default.svg"}
+                src={"/team/joseph.jpeg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
@@ -549,7 +550,7 @@ export default function page() {
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
             <Image
-                 src={"/team/default.svg"}
+                 src={"/team/dharmesh.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}

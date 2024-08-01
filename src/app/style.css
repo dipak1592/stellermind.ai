@@ -139,3 +139,6 @@ a{
   color: #3b82f6;
   font-weight: bold;
 }
+.map .worldmap__figure-container svg{
+overflow: visible;
+}

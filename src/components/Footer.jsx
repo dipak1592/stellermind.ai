@@ -15,7 +15,7 @@ const data = [
   {
     country: "in",
     value:
-      "- A 1602 Privillon, Ambli, BRT Road, Iskcon Cross Rd, Vikram Nagar, Ahmedabad, Gujarat 380059.",
+      "- A 1602 Privilon, Ambli, BRT Road, Iskcon Cross Rd, Vikram Nagar, Ahmedabad, Gujarat 380059.",
   },
   {
     country: "us",

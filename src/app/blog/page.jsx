@@ -76,7 +76,7 @@ export default function Blog() {
             with our innovative services.
       </p>
 
-      <main className="flex justify-center mt-[30px]">
+      <main className="flex flex-row justify-center mt-[30px]">
         <div className="inline-block text-center sm:flex gap-2 md:gap-6 mb-8">
           {tabs.map((tab , index) => (
             <button

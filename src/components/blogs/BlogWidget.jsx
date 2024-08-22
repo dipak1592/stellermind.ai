@@ -22,19 +22,19 @@ const formatDate = (dateString) => {
   return `${month}-${day}-${year}`;
 };
 
-const BlogWidget = ({ featureImage, updatedAt, category, title, content, id, wordLimit = 50 }) => {
+const BlogWidget = ({ featureImage, updatedAt, category, title, content,slug, wordLimit = 30 }) => {
   const truncatedContent = truncateContent(content, wordLimit);
   const formattedDate = formatDate(updatedAt);
   const formattedCategory = category.toUpperCase(); 
   return (
-    <div className="py-2 text-center md:text-left flex flex-col md:flex md:flex-row overflow-hidden md:w-[100%] lg:w-[100%]">
-      <div className="md:w-[40%] md:p-1 place-items-center">
+    <div className="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+      <div className="relative h-60 w-full ">
         <Image width={600} height={600} src={featureImage} alt={title} className="rounded-lg p-1 md:p-2 lg:p-3" />
       </div>
 
-      <div className="md:w-[60%] m-2 gap-2 text-white">
-        <div className="flex flex-col md:flex md:flex-row text-white mt-4 md:mt-1 items-center md:text-xl lg:text-sm">
-          <p className="pe-2">{formattedDate}</p>
+      <div className="p-4 flex flex-col justify-between">
+        <div className="flex flex-row items-start mb-4">
+          <p className="text-sm text-gray-400 pr-5">{formattedDate}</p>
           <p className="bg-blue-500 text-white py-1 px-2 rounded-xl">{formattedCategory}</p>
         </div>
 
@@ -42,7 +42,7 @@ const BlogWidget = ({ featureImage, updatedAt, category, title, content, id, wor
           {title}
         </h3>
         <div className="mb-2 md:text-xl lg:text-[18px]" dangerouslySetInnerHTML={{ __html: truncatedContent }}></div>
-        <a href={`/blog/${id}`} className="text-blue-500 md:text-xl lg:text-sm cursor-pointer">
+        <a href={`/blog/${slug}`} className="text-blue-500 md:text-xl lg:text-sm cursor-pointer">
           <u>Read More</u>
         </a>
       </div>

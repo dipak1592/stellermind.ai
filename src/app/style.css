@@ -133,8 +133,18 @@ a{
   color: transparent; /* text-transparent */
   -webkit-background-clip: text; /* bg-clip-text */
   background-clip: text;
+  font-weight: 900;
+  font-size: 25px;
+  padding: 7px 0px 7px 0px;
 }
 
+.blogcontent img
+{
+   border-radius: 20px;
+   width: 100%;
+   padding:5px;
+  
+}
 .blogcontent a{
   color: #3b82f6;
   font-weight: bold;

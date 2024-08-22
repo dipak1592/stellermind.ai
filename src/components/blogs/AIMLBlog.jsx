@@ -21,22 +21,23 @@ async function AIMLBlog() {
     return <BlogError />;
   }
   return (
-    
-      <div className="col-span-3 md:col-span-2">
-        {blogData?.map((blog, index) => (
-        <BlogWidget
-          key={index}
-          featureImage={blog.featureImage}
-          updatedAt={blog.updatedAt}
-          category={blog.category}
-          title={blog.title}
-          content={blog.content}
-          id={blog._id}
-        />
-        
-      ))}
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {blogData.slice(0, 9).map((blog, index) => (
+          <BlogWidget
+            key={index}
+            featureImage={blog.featureImage}
+            updatedAt={blog.updatedAt}
+            category={blog.category}
+            title={blog.title}
+            content={blog.content}
+            id={blog._id}
+            slug={blog.slug}
+          />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
 export default AIMLBlog

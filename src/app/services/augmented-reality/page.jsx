@@ -80,6 +80,8 @@ function page() {
      <DynamicHeading FirstContent={"Don't just"} FirstsubContent={"take our words"} SecondContent={"People ❤️ "} SecondSubContent={"Us"}/>
      <Testimonial />
      <CallToMeet/>
+
+     
    </div>
   )
 }

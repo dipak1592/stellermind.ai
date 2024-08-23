@@ -7,6 +7,7 @@ import DevOpsBlog from '@/components/blogs/DevOpsBlog';
 import IOTBlog from '@/components/blogs/IOTBlog';
 import SoftwareDevBlog from '@/components/blogs/SoftwareDevBlog';
 import React, { useState } from 'react'
+import Head from "next/head";
 
 export default function Blog() {
   const [activeTab, setActiveTab] = useState('All');
@@ -54,6 +55,51 @@ export default function Blog() {
   };
   return (
     <>
+     <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://stellarmind.ai/blog"
+            },
+            "headline": "StellarMind's Blog Universe",
+            "description": "Discover the latest insights, expert tips, and industry trends in AI/ML, software development, DevOps integration, cloud solutions, and more with StellarMind's comprehensive blog.",
+            "author": {
+              "@type": "Organization",
+              "name": "StellarMind"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "StellarMind",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://stellarmind.ai/betalogo.png"
+              }
+            },
+            "blogPost": tabs.map(tab => ({
+              "@type": "BlogPosting",
+              "headline": `${tab.name} Blog Posts`,
+              "url": `https://stellarmind.ai/blog/${tab.name.toLowerCase()}`,
+              "description": `Find the latest ${tab.name} blog posts at StellarMind.`,
+              "author": {
+                "@type": "Organization",
+                "name": "StellarMind"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "StellarMind",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://stellarmind.ai"
+                }
+              }
+            }))
+          })}
+        </script>
+      </Head>
+
        <section className=" font-semibold text-white">
         <TubeLight />
         <div className="relative flex justify-center z-[5] pt-[60px]">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 async function getData(slug) {
   try {
@@ -38,8 +39,47 @@ async function Page({ params }) {
   const formattedDate = formatDate(post.updatedAt);
   const formattedCategory = post.category.toUpperCase();
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    image: post.featureImage,
+    datePublished: new Date(post.createdAt).toISOString(),
+    dateModified: new Date(post.updatedAt).toISOString(),
+    author: {
+      "@type": "Person",
+      name: post.author || "Unknown Author", // Replace with actual author data if available
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "StellarMind",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://stellarmind.ai/betalogo.png",
+      },
+    },
+    description: post.excerpt || `A detailed blog post on ${post.title}`, // Replace with a summary or description of the post
+    articleBody: post.content.replace(/<[^>]+>/g, ""), // Strips HTML tags for cleaner text
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://stellarmind.com/blog/${post.slug}`, // Replace with your actual blog post URL
+    },
+  };
+
   return (
     <div className="container">
+      <Head>
+        <title>{post.title}</title>
+        <meta
+          name="description"
+          content={post.excerpt || `A blog post on ${post.title}`}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </Head>
+
       <div className="text-white">
         <div className="py-2 text-center md:text-left overflow-hidden md:w-[60%] lg:w-[60%] mx-auto">
           <div className="w-[100%] m-2 gap-2 text-white">

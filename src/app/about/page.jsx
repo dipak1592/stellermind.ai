@@ -1,3 +1,4 @@
+import Head from "next/head";
 import CallToMeet from "@/components/CallToMeet";
 import DynamicHeading from "@/components/DynamicHeading";
 import Testimonial from "@/components/Testimonial";
@@ -21,8 +22,43 @@ export const metadata = {
 };
 
 export default function page() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "StellarMind",
+    url: "https://stellarmind.ai",
+    logo: "https://stellarmind.ai/betalogo.png",
+    founders: [
+      {
+        "@type": "Person",
+        name: "Ronak Barot",
+        jobTitle: "Founder and CEO",
+        url: "https://stellarmind.ai/team/ronak",
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/company/stellarmindai",
+      "https://twitter.com/StellarMind_ai",
+      "https://www.facebook.com/StellarMind/",
+      "https://www.instagram.com/stellarmind_ai",
+    ],
+    description:
+      "StellarMind is a leading and globally accepted IT consultant and solution provider in AI/ML, IoT, cloud applications, microservices, mobile apps, DevOps, and AR/VR technology.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      url: "https://stellarmind.ai/contact",
+    },
+  };
+
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </Head>
       <div className="grid container md:grid-cols-2 gap-[20px] ">
         <div className="relative py-[90px] text-white">
           <h1 className="pb-3 text-[35px] xl:text-[50px] lg:text-[44px] md:text-[40px] sm:text-[40px] font-semibold">
@@ -189,7 +225,7 @@ export default function page() {
 
             <div className="md:col-span-1 col-span-2">
               <h5 className=" text-[25px] font-bold text-left text-blue-600 ">
-                Sanjay  Gandotra
+                Sanjay Gandotra
               </h5>
               <p className="text-left bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
                 CTO, Stellarmind.ai
@@ -338,11 +374,10 @@ export default function page() {
             {"The Powerhouse Behind Our Market and Operations"}
           </h4>
           <p className="text-white font-semibold mt-1 text-[20px]">
-          Marketing and Operation Team
-
+            Marketing and Operation Team
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 my-[30px] md:mx-[100px]  bg-[#0d0d0df4] text-white md:p-10 p-5 rounded-2xl">
-          <div className="md:col-span-1 col-span-2 flex flex-col items-center">
+            <div className="md:col-span-1 col-span-2 flex flex-col items-center">
               <Image
                 src={"/team/kiran.webp"}
                 className="rounded-2xl mb-[5px]"
@@ -350,11 +385,11 @@ export default function page() {
                 height={250}
                 alt=""
               />
-               <h5 className=" text-[22px] font-bold text-white ">
-               Kiran Chaudhari
+              <h5 className=" text-[22px] font-bold text-white ">
+                Kiran Chaudhari
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Talent Acquisition Lead
+                Talent Acquisition Lead
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
@@ -366,7 +401,7 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Sanjay Gojiya
+                Sanjay Gojiya
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
                 Business Development Executive
@@ -380,25 +415,23 @@ export default function page() {
                 height={250}
                 alt=""
               />
-               <h5 className=" text-[22px] font-bold text-white ">
-               Topon Mohonto
+              <h5 className=" text-[22px] font-bold text-white ">
+                Topon Mohonto
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Social Marketing Manager
+                Social Marketing Manager
               </p>
             </div>
-           
-        
           </div>
           <h4 className="heading text-[30px] font-semibold bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">
             {"The Coding Gurus of Stellarmind"}
           </h4>
           <p className="text-white font-semibold mt-1 text-[20px]">
-          Our Development Team
+            Our Development Team
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 my-[30px]  bg-[#0d0d0df4] text-white md:p-10 p-5 rounded-2xl">
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/smeet.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -406,14 +439,14 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Smeet Patel 
+                Smeet Patel
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Lead Fullstack Developer
+                Lead Fullstack Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/joseph.jpeg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -421,14 +454,14 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Joseph Chandy
+                Joseph Chandy
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Lead Java Developer
+                Lead Java Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/ishan.jpeg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -436,14 +469,14 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Ishan Patel
+                Ishan Patel
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Fullstack .Net Developer
+                Fullstack .Net Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/bharat.jpeg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -451,14 +484,14 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Bharat Prajapati
+                Bharat Prajapati
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Fullstack .Net Developer
+                Fullstack .Net Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/krupa.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -466,29 +499,29 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Krupa Patel
+                Krupa Patel
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Senior Android Developer
+                Senior Android Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
-                 src={"/team/default.svg"}
+              <Image
+                src={"/team/default.svg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Paranjothi Govind 
+                Paranjothi Govind
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              React Native Developer
+                React Native Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/aayush.jpeg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -496,29 +529,27 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Ayush Gupta
+                Ayush Gupta
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Senior AI/ML Engineer
+                Senior AI/ML Engineer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/milan.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
                 alt=""
               />
-              <h5 className=" text-[22px] font-bold text-white ">
-              Milan Oza
-              </h5>
+              <h5 className=" text-[22px] font-bold text-white ">Milan Oza</h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Frontend Developer
+                Frontend Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/shubh.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -526,15 +557,15 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Shubh Ghataliya 
+                Shubh Ghataliya
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Frontend Developer
+                Frontend Developer
               </p>
             </div>
-            
+
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
+              <Image
                 src={"/team/aastha.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
@@ -542,28 +573,27 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Astha Barot
+                Astha Barot
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Front end Developer
+                Front end Developer
               </p>
             </div>
             <div className="md:col-span-1 col-span-2 flex flex-col items-center">
-            <Image
-                 src={"/team/dharmesh.jpg"}
+              <Image
+                src={"/team/dharmesh.jpg"}
                 className="rounded-2xl mb-[5px]"
                 width={250}
                 height={250}
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-              Dharmesh Dobariya
+                Dharmesh Dobariya
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
-              Shopify & Wordpress Developer
+                Shopify & Wordpress Developer
               </p>
             </div>
-           
           </div>
         </div>
 

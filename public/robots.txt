@@ -1,0 +1,22 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://stellarmind.ai
+
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /private/
+Allow: /public/
+Allow: /images/
+
+# Disallow specific query parameters
+Disallow: /*?token=
+Disallow: /*?session=
+
+# Sitemaps
+Sitemap: https://stellarmind.ai/sitemap.xml
+Sitemap: https://stellarmind.ai/sitemap-0.xml

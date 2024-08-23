@@ -588,8 +588,46 @@ function Contact() {
       
     </div>
     </>
+
+    
     
   );
 }
+
+<script
+type="application/ld+json"
+dangerouslySetInnerHTML={{
+  __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StellarMind",
+    "url": "https://stellarmind.ai/",
+    "logo": "https://stellarmind.ai/betalogo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+917863889382,+16506670749",
+      "email": "info@stellarmind.ai",
+      "areaServed": "IN,USA",
+      "availableLanguage": "English",
+    },
+    "address": {
+      "@type": "A-1602 Privillon, Ambli ,Iskon cross road, Ahmedabad, Gujarat 380054",
+      "addressLocality": "Ahemdabad",
+      "addressRegion": "Gujarat",
+      "postalCode": "380054",
+      "addressCountry": "IN",
+    },
+    "description": "StellarMind provides innovative digital solutions and consultation services. We are committed to delivering quality service and support. Reach out to us to revolutionize your digital experience.",
+    "sameAs": [
+      "https://www.facebook.com/stellarmind.ai",
+      "https://twitter.com/stellarmind.ai",
+      "https://www.linkedin.com/stellarmind.ai",
+    ],
+    "contactPage": "https://stellarmind.ai/contact",
+  }),
+}}
+/>
+
 
 export default Contact;

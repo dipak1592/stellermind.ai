@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import BrandSlider from "@/components/BrandSlider";
 import DynamicHeading from "@/components/DynamicHeading";
 import HeroStatistics from "@/components/HeroStatistics";
@@ -27,8 +28,33 @@ const dmserif = DM_Serif_Text({
 })
 const tabs = [ 'AI/ML', 'AR', 'Frontend', 'Backend','CMS', 'Mobile'];
 export default function Home() {
+  const schemaData = {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "StellarMind",
+    "url": "https://stellarmind.ai",
+    "logo": "https://stellarmind.ai/betalogo.png", 
+    "sameAs": [
+      "https://www.facebook.com/StellarMind",
+      "https://twitter.com/StellarMind",
+      "https://www.linkedin.com/company/StellarMind"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+917863889382,16506670749", 
+      "contactType": "Customer Service",
+      "areaServed": "India, USA",
+      "availableLanguage": "English"
+    }
+  };
+
   return (
     <>
+     <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </Head>
     <div className="bg-gradient-to-l from-black via-[#000000ad] to-transparent">
     <div className="grid container md:grid-cols-2 gap-3 ">
       <div className="relative py-[90px] text-white">

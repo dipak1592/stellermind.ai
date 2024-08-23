@@ -1,3 +1,4 @@
+import React from 'react';
 import BrandSlider from "@/components/BrandSlider";
 import CallToMeet from "@/components/CallToMeet";
 import DynamicHeading from "@/components/DynamicHeading";
@@ -5,14 +6,13 @@ import Testimonial from "@/components/Testimonial";
 import Heading from "@/components/servicepage/Heading";
 import Industries from "@/components/servicepage/Industries";
 import ServiceBox from "@/components/servicepage/ServiceBox";
-import TestimonialSlider from "@/components/slider/TestimonialSlider";
 import AI from "@/components/technologies/AI";
-import Image from "next/image";
-import React from "react";
+
 export const metadata = {
   title: "Unleash the Power of AI: Elevate Your Business with StellarMind.AI",
   description: "Dive into the realm of limitless possibilities with StellarMind.AI's cutting-edge AI services.Let us empower your business to thrive in the age of artificial intelligence.",
 };
+
 function page() {
   const services = [
     {
@@ -56,19 +56,17 @@ function page() {
       desc: " Unleash the full potential of deep learning services, revolutionizing how you leverage data and drive intelligent insights.",
     },
   ];
+
   const subHeading = [
     {
-      point:
-        "StellarMind specializes in cutting-edge AI and ML services tailored to revolutionize your business. We aim to create modern business opportunities for our clients in this data-enabled accelerating world via stellar AI development services.",
+      point: "StellarMind specializes in cutting-edge AI and ML services tailored to revolutionize your business. We aim to create modern business opportunities for our clients in this data-enabled accelerating world via stellar AI development services.",
     },
     {
-      point:
-        "With our proven track record of delivering innovative AI solutions, we are your trusted partner in navigating the complexities of the digital age. Let's transform your vision into reality together.",
+      point: "With our proven track record of delivering innovative AI solutions, we are your trusted partner in navigating the complexities of the digital age. Let's transform your vision into reality together.",
     },
     {
-      point:
-        "Partner with us to embark on a transformative journey towards unparalleled efficiency and strategic advantage in today's digital landscape. Experience the future of technology with StellarMind.",
-    }
+      point: "Partner with us to embark on a transformative journey towards unparalleled efficiency and strategic advantage in today's digital landscape. Experience the future of technology with StellarMind.",
+    },
   ];
 
   return (
@@ -78,32 +76,24 @@ function page() {
         subHeading={subHeading}
         imgUrl={"/AI.avif"}
       />
-      <DynamicHeading
-        FirstContent={"Our"}
-        FirstsubContent={"Trusted Partners"}
-      />
+      <DynamicHeading FirstContent={"Our"} FirstsubContent={"Trusted Partners"} />
       <BrandSlider />
       <DynamicHeading FirstContent={"Our"} FirstsubContent={"AI Services"} />
       <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 grid-cols-1 gap-[25px]">
-        {services.map((item, index) => {
-          return (
-            <div key={index}>
-              <ServiceBox
-                image={item.image}
-                title={item.title}
-                desc={item.desc}
-                index={index}
-              />
-            </div>
-          );
-        })}
+        {services.map((item, index) => (
+          <div key={index}>
+            <ServiceBox
+              image={item.image}
+              title={item.title}
+              desc={item.desc}
+              index={index}
+            />
+          </div>
+        ))}
       </div>
       <Industries />
-      <DynamicHeading
-        FirstContent={"AI-ML"}
-        FirstsubContent={"Technologies"}
-      />
-      <AI/>
+      <DynamicHeading FirstContent={"AI-ML"} FirstsubContent={"Technologies"} />
+      <AI />
       <DynamicHeading
         FirstContent={"Don't just"}
         FirstsubContent={"take our words"}
@@ -112,6 +102,72 @@ function page() {
       />
       <Testimonial />
       <CallToMeet />
+
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Unleash the Power of AI: Elevate Your Business with StellarMind.AI",
+            "description": "Dive into the realm of limitless possibilities with StellarMind.AI's cutting-edge AI services. Let us empower your business to thrive in the age of artificial intelligence.",
+            "url": "https://stellarmind.ai/",
+            "mainEntity": {
+              "@type": "WebPage",
+              "name": "Artificial Intelligence & Machine Learning",
+              "description": "Explore StellarMind's AI & ML services, including Computer Vision, Natural Language Processing, Machine Learning Development, AI Consulting, Generative AI, and more.",
+              "image": "/AI.avif",
+            },
+            "about": {
+              "@type": "Thing",
+              "name": "Artificial Intelligence",
+              "alternateName": ["AI", "Machine Learning", "ML", "Deep Learning"],
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "StellarMind.AI",
+              "url": "https://stellarmind.ai/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://stellarmind.ai/betalogo.png",
+              },
+              "sameAs": [
+                "https://www.linkedin.com/stellarmind.ai",
+                "https://twitter.com/stellarmind,ai",
+              ],
+            },
+            "provider": {
+              "@type": "Organization",
+              "name": "StellarMind.AI",
+              "url": "https://stellarmind.ai/",
+            },
+            "offers": {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI & ML Services",
+                "description": "StellarMind offers AI & ML services including Computer Vision, NLP, Machine Learning Development, AI Consulting, Generative AI, and more.",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "StellarMind.AI",
+                },
+              },
+            },
+            "hasPart": services.map((service) => ({
+              "@type": "Service",
+              "name": service.title,
+              "description": service.desc,
+              "image": service.image,
+            })),
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://stellarmind.ai/?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
     </div>
   );
 }

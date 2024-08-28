@@ -128,6 +128,10 @@ a{
 
 /* =========================Blog conetent===================================== */
 
+.gradient-title
+{
+   
+}
 .blogcontent h1,h2,h3,h4,h5,h6{
   background: linear-gradient(to right, #5786ec, #10b981);
   color: transparent; /* text-transparent */

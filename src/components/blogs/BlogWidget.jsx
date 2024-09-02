@@ -1,17 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
 import truncate from 'truncate-html'; 
-
-
+import Link from 'next/link'; 
+import { parseISO, format } from 'date-fns';
 
 const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  try {
+    const date = parseISO(dateString);
+    return format(date, 'MMM dd yyyy'); // Example: "Aug 23 2024"
+  } catch (error) {
+    console.error(`Invalid date: ${dateString}`, error);
+    return dateString; // Return original string if invalid
+  }
 };
+
+
+
 
 const BlogWidget = ({ featureImage, updatedAt, category, title, content, slug, wordLimit = 30 }) => {
   // Apply the truncation function
@@ -21,8 +25,18 @@ const BlogWidget = ({ featureImage, updatedAt, category, title, content, slug, w
 
   return (
     <div className="bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-      <div className="relative md:h-full h-full lg:h-60 md: w-full">
-        <Image width={600} height={600} src={featureImage} alt={title} className="rounded-lg p-1 md:p-2 lg:p-3" />
+      <div className="relative md:h-full h-full lg:h-60 w-full">
+        <Link href={`/blog/${slug}`} passHref>
+          
+            <Image
+              width={600}
+              height={600}
+              src={featureImage}
+              alt={title}
+              className="rounded-lg p-1 md:p-2 lg:p-3"
+            />
+          
+        </Link>
       </div>
 
       <div className="p-4 flex flex-col justify-between">

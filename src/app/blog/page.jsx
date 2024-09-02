@@ -9,6 +9,7 @@ import SoftwareDevBlog from '@/components/blogs/SoftwareDevBlog';
 import React, { useState } from 'react'
 import Head from "next/head";
 
+
 export default function Blog() {
   const [activeTab, setActiveTab] = useState('All');
   const tabs = [{

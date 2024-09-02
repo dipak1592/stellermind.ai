@@ -2,7 +2,21 @@ import Image from "next/image";
 import React from "react";
 import Head from "next/head";
 import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import Link from 'next/link'; 
+import { parseISO, format } from 'date-fns';
 
+const formatDate = (dateString) => {
+  try {
+    const date = parseISO(dateString);
+    return format(date, 'MMM dd yyyy'); // Example: "Aug 23 2024"
+  } catch (error) {
+    console.error(`Invalid date: ${dateString}`, error);
+    return dateString; // Return original string if invalid
+  }
+};
+
+
+// Fetching the current blog post data
 async function getData(slug) {
   try {
     const res = await fetch(
@@ -16,14 +30,15 @@ async function getData(slug) {
     return res.json();
   } catch (error) {
     console.error(error);
-    return []; // Return empty array on error
+    return [];
   }
 }
 
+// Fetching the related posts
 async function getRelatedPosts(category, excludeSlug) {
   try {
     const res = await fetch(
-      `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/blog/getposts?category=${category}&exclude=${excludeSlug}`
+      `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/blog/getposts?category=${category}`
     );
 
     if (!res.ok) {
@@ -32,19 +47,13 @@ async function getRelatedPosts(category, excludeSlug) {
     return res.json();
   } catch (error) {
     console.error(error);
-    return []; // Return empty array on error
+    return [];
   }
 }
 
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-};
 
+
+// Shuffling the array of related posts
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -67,11 +76,11 @@ async function Page({ params }) {
 
   let relatedPosts = await getRelatedPosts(post.category, slug);
 
-  // Filter out the current post from the related posts and randomize the order
-  relatedPosts = shuffleArray(relatedPosts.filter(relatedPost => relatedPost.slug !== slug));
+  // Properly filtering the related posts to exclude the current one
+  relatedPosts = relatedPosts.filter(relatedPost => relatedPost.slug !== slug);
 
-  // Limit the number of related posts to display
-  const displayedRelatedPosts = relatedPosts.slice(0, 3);
+  // Shuffling and slicing after filtering
+  const displayedRelatedPosts = shuffleArray(relatedPosts).slice(0, 3);
 
   const shareUrl = `https://stellarmind.com/blog/${post.slug}`;
   const shareTitle = encodeURIComponent(post.title);
@@ -167,6 +176,7 @@ async function Page({ params }) {
                   key={relatedPost.slug}
                   className="related-post bg-gray-800 p-4 rounded-lg shadow-lg"
                 >
+                          <Link href={`/blog/${relatedPost.slug}`} passHref>
                   <Image
                     src={relatedPost.featureImage}
                     alt={relatedPost.title}
@@ -174,6 +184,7 @@ async function Page({ params }) {
                     height={250}
                     className="rounded-t-lg"
                   />
+                  </Link>
                   <h3 className="text-lg font-semibold mt-2">{relatedPost.title}</h3>
                   <p className="text-sm mt-1">{formatDate(relatedPost.updatedAt)}</p>
                   <a

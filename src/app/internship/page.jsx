@@ -146,7 +146,7 @@ const InternshipPage = () => {
     <div className="text-left text-white p-[10px]">
       {/* Heading */}
       <h1 className="pb-3 text-[30px] xl:text-[50px] lg:text-[44px] md:text-[40px] font-semibold">
-        {"Without active projects,"} <br />
+      &quot;Without active projects,&quot; <br />
         <span
           className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
         >

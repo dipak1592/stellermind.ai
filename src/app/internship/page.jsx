@@ -146,23 +146,22 @@ const InternshipPage = () => {
     <div className="text-left text-white p-[10px]">
       {/* Heading */}
       <h1 className="pb-3 text-[30px] xl:text-[50px] lg:text-[44px] md:text-[40px] font-semibold">
-      &quot;Without active projects,&quot; <br />
-        <span
-          className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
-        >
-           &quot;Your growth takes a halt&quot;
-        </span>
-        <br />
-        <span>You&apos;re not evolving
-        </span>
-        <br />
-        <span
-          className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
-        >
-            &quot;You&apos;re stuck in default!&quot;
-
-        </span>
-      </h1>
+  {"Without active projects,"} <br />
+  <span
+    className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
+  >
+    {'Your growth takes a halt'}
+  </span>
+  <br />
+  <span>{"You're not evolving"}
+  </span>
+  <br />
+  <span
+    className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
+  >
+   {" You're stuck in default!"}
+  </span>
+</h1>
       {/* Buttons */}
       <div className="mt-[30px] flex flex-row gap-5">
         <Link href={"#internships"}>

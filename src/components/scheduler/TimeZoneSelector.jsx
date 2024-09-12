@@ -6,7 +6,7 @@ const TimeZoneSelector = ({ onSelectTimeZone }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState('');
   const wrapperRef = useRef(null);
-  const timeZones = ['EST', 'MST', 'PST', 'CST'];
+  const timeZones = ['EST', 'MST', 'PST', 'CST','IST'];
   useEffect(() => {
     // Function to close dropdown if clicked outside
     function handleClickOutside(event) {

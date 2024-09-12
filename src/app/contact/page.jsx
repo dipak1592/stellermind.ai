@@ -270,6 +270,47 @@ function Contact() {
                 height={200}
               />
             </div>  
+            <div className="flex items-center p-[15px] justify-center border border-gray-700">
+              <Image
+                src={"/brands/hypefresh-logo-red.png"}
+                alt="brand"
+                width={120}
+                height={200}
+              />
+            </div>  
+            <div className="flex items-center p-[15px] justify-center border border-gray-700">
+              <Image
+                src={"/brands/securis360.png"}
+                alt="brand"
+                width={120}
+                height={200}
+              />
+            </div>  
+         
+            <div className="flex items-center p-[15px] justify-center border border-gray-700">
+              <Image
+                src={"/brands/thirdwave.svg"}
+                alt="brand"
+                width={120}
+                height={200}
+              />
+            </div>  
+            <div className="flex items-center p-[15px] justify-center border border-gray-700">
+              <Image
+                src={"/brands/Beyond-technology.png"}
+                alt="brand"
+                width={120}
+                height={200}
+              />
+            </div>  
+            <div className="flex items-center p-[15px] justify-center border border-gray-700">
+              <Image
+                src={"/brands/absolute-logo.svg"}
+                alt="brand"
+                width={120}
+                height={200}
+              />
+            </div>  
           </div>
           {/* <div className="flex items-center pt-8 justify-center gap-2">
               <div className="text-white text-xl mb-7">

@@ -573,7 +573,7 @@ export default function page() {
                 alt=""
               />
               <h5 className=" text-[22px] font-bold text-white ">
-                Astha Barot
+                Aastha Barot
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
                 Front end Developer
@@ -592,6 +592,20 @@ export default function page() {
               </h5>
               <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
                 Shopify & Wordpress Developer
+              </p>
+            </div>
+            <div className="md:col-span-1 col-span-2 flex flex-col items-center">
+              <Image
+                src={"/team/dipak.jpeg"}
+                className="rounded-2xl mb-[5px]"
+                width={250}
+                height={250}
+                alt=""
+              />
+              <h5 className=" text-[22px] font-bold text-white ">
+              Dipak Dhariyaparmar              </h5>
+              <p className=" bg-gradient-to-r font-semibold to-blue-600 from-green-500 text-transparent bg-clip-text">
+              Frontend Developer
               </p>
             </div>
           </div>

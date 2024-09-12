@@ -71,11 +71,15 @@ const HomePage = () => {
     };
   }, []);
 
-  // Tabs configuration
+
   const tabs = [
     { id: "AI/ML", label: "AI/ML" },
-    { id: "Web Dev", label: "Web Development" },
-    // Add more tabs as needed
+    { id: "AR", label: "Augmented Reality" },
+  { id: "Backend", label: "Backend Development" },
+  { id: "Frontend", label: "Frontend Development" },
+  { id: "CMS", label: "Content Management Systems" },
+  { id: "Mobile", label: "Mobile Development" },
+    
   ];
 
   const schemaData = {
@@ -216,6 +220,53 @@ const HomePage = () => {
       <DynamicHeading FirstContent={"Hire"} FirstsubContent={"Dedicated Developers"} />
 
       <HireDeveloper />
+
+      <section className="container mx-auto px-4 py-10">
+  <DynamicHeading FirstContent={"Internship"} FirstsubContent={"Opportunities"} />
+  
+  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
+    {/* Left Side: Content (Headings Only) */}
+    <div className="lg:w-[60%] w-full text-white flex justify-center items-center">
+      <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[44px] xl:text-[50px] font-semibold p-[8%] text-center lg:text-left">
+        {"Stuck in the Past?"} <br />
+        <span className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">
+          {"It’s Time to Evolve."}
+        </span>
+        <br />
+        <span>{"Step Into the Future with"}</span>
+        <br />
+        <span className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">
+          {"Stellarmind’s Internship Program!"}
+        </span>
+      </h1>
+    </div>
+
+    {/* Right Side: Image */}
+    <div className="lg:w-[40%] w-full flex justify-center lg:justify-start">
+      <img 
+        src="/internship-homepage.png" 
+        alt="Internship" 
+        className="w-full sm:w-[80%] lg:w-[80%] h-auto rounded-lg shadow-lg object-cover"
+      />
+    </div>
+  </div>
+
+  {/* Read More Button */}
+  <div className="flex justify-center mt-5">
+    <Link href="/internship" passHref>
+      <button className="flex items-center border border-gray-500 text-[16px] sm:text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border-white text-white font-bold rounded">
+        Read More <FaArrowRightLong />
+      </button>
+    </Link>
+  </div>
+</section>
+
+
+
+
+
+
+
 
       <section className="container lg:w-[90%] w-full px-4 py-10">
         <DynamicHeading FirstContent={"Our"} FirstsubContent={"Blogs"} />

@@ -17,7 +17,12 @@ const LOGOS = [
  "/brands/uex.svg",
  "/brands/techtory.svg",
  "/brands/nurture.svg",
- "/brands/quickcam.svg"
+ "/brands/quickcam.svg",
+ "/brands/hypefresh-logo-red.png",
+ "/brands/securis360.png",
+ "/brands/thirdwave.svg",
+ "/brands/Beyond-technology.png",
+ "/brands/absolute-logo.svg"
 ];
 
 function BrandSlider() {

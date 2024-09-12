@@ -243,12 +243,15 @@ const HomePage = () => {
 
     {/* Right Side: Image */}
     <div className="lg:w-[40%] w-full flex justify-center lg:justify-start">
-      <img 
-        src="/internship-homepage.png" 
-        alt="Internship" 
-        className="w-full sm:w-[80%] lg:w-[80%] h-auto rounded-lg shadow-lg object-cover"
-      />
-    </div>
+  <Image
+    src="/internship-homepage.png"
+    alt="Internship"
+    width={800}   
+    height={600}  
+    className="w-full sm:w-[80%] lg:w-[80%] h-auto rounded-lg shadow-lg object-cover"
+  />
+</div>
+
   </div>
 
   {/* Read More Button */}

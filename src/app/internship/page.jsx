@@ -54,7 +54,7 @@ const InternshipPage = () => {
   // Internship data for topics
   const internshipTopics = [
     {
-      title: "AI/ML",
+      title: "ai-ml",
       description:
         "Dive deep into the world of Artificial Intelligence and Machine Learning.",
       image: "/ai-ml.jpg",
@@ -107,6 +107,22 @@ const InternshipPage = () => {
       testimonial: "The mentors and projects were fantastic. Highly recommend!",
       image: "/team/default.svg",
     },
+    {
+      name: "John Doe",
+      testimonial: "This internship changed my career path for the better!",
+      image: "/team/default.svg",
+    },
+    {
+      name: "Jane Smith",
+      testimonial:
+        "I gained real-world experience that helped me land my dream job.",
+      image: "/team/default.svg",
+    },
+    {
+      name: "Mike Johnson",
+      testimonial: "The mentors and projects were fantastic. Highly recommend!",
+      image: "/team/default.svg",
+    },
   ];
 
   return (
@@ -115,11 +131,14 @@ const InternshipPage = () => {
       <section className="relative h-full flex flex-col md:flex-row overflow-hidden justify-center items-center">
   {/* Left side: Image */}
   <div className="w-full lg:w-[40%] h-[50%] lg:h-full relative flex justify-center items-center">
-    <img
-      src="/internship-bg.png"
-      alt="Internship Background"
-      className="w-full h-full object-cover"
-    />
+  <Image
+  src="/internship-bg.png"
+  alt="Internship Background"
+  width={600}
+  height={400}
+  className="w-full h-full object-cover"
+/>
+
   </div>
 
   {/* Right side: Content */}
@@ -134,12 +153,14 @@ const InternshipPage = () => {
           {"Your growth takes a halt;"}
         </span>
         <br />
-        <span>{"You're not evolving,"}</span>
+        <span>You&apos;re not evolving
+        </span>
         <br />
         <span
           className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
         >
-          {"You’re stuck in default!"}
+            &quot;You&apos;re stuck in default!&quot;
+
         </span>
       </h1>
       {/* Buttons */}

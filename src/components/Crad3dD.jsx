@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import { cn } from "./cn";
 import Image from "next/image";
-import { createContext, useState, useContext, useRef, useEffect } from "react";
+import { createContext, useState, useContext, useRef, useEffect, useCallback } from "react";
 
+// Create context for mouse enter
 const MouseEnterContext = createContext();
 
 export const CardContainer = ({
@@ -13,24 +14,26 @@ export const CardContainer = ({
   const containerRef = useRef(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
-  const handleMouseMove = (e) => {
+  // Handle mouse move for 3D effect
+  const handleMouseMove = useCallback((e) => {
     if (!containerRef.current) return;
-    const { left, top, width, height } =
-      containerRef.current.getBoundingClientRect();
+    const { left, top, width, height } = containerRef.current.getBoundingClientRect();
     const x = (e.clientX - left - width / 2) / 25;
     const y = (e.clientY - top - height / 2) / 25;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-  };
+  }, []);
 
-  const handleMouseEnter = () => {
+  // Handle mouse enter event
+  const handleMouseEnter = useCallback(() => {
     setIsMouseEntered(true);
-  };
+  }, []);
 
-  const handleMouseLeave = () => {
+  // Handle mouse leave event
+  const handleMouseLeave = useCallback(() => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
-  };
+  }, []);
 
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
@@ -87,22 +90,26 @@ export const CardItem = ({
   const ref = useRef(null);
   const [isMouseEntered] = useMouseEnter();
 
-  useEffect(() => {
-    handleAnimations();
-    // Dependency array should include all variables that effect the animation
-  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
-
-  const handleAnimations = () => {
+  // Memoized function to handle animations
+  const handleAnimations = useCallback(() => {
     if (!ref.current) return;
     ref.current.style.transform = isMouseEntered
       ? `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`
       : "translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
-  };
+  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
+
+  // Add handleAnimations in the dependency array
+  useEffect(() => {
+    handleAnimations();
+  }, [handleAnimations]);
 
   return (
     <Tag
       ref={ref}
-      className={cn("text-center flex flex-col items-center transition duration-200 ease-linear", className)}
+      className={cn(
+        "text-center flex flex-col items-center transition duration-200 ease-linear",
+        className
+      )}
       {...rest}
     >
       {children}
@@ -118,4 +125,3 @@ export const useMouseEnter = () => {
   }
   return context;
 };
-

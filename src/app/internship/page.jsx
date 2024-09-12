@@ -150,7 +150,7 @@ const InternshipPage = () => {
   <span
     className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
   >
-    {'Your growth takes a halt'}
+    'Your growth takes a halt'
   </span>
   <br />
   <span>{"You're not evolving"}
@@ -159,7 +159,7 @@ const InternshipPage = () => {
   <span
     className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
   >
-   {" You're stuck in default!"}
+    'You're stuck in default!'
   </span>
 </h1>
       {/* Buttons */}

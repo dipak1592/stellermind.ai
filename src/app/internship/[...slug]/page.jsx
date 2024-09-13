@@ -208,7 +208,7 @@ function InternshipPage() {
       <div className="text-center text-white py-20">
         <h1 className="text-4xl font-bold">Internship Not Found</h1>
         <p className="text-lg mt-4">
-          Sorry, we couldn't find the internship you're looking for.
+        Sorry, we could&apos;t find the internship you&apos;re looking for.
         </p>
         <Link href="/internship">
           <span className="text-blue-500 underline mt-4 block">

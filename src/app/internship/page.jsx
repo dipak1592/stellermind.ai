@@ -6,9 +6,9 @@ import Link from "next/link";
 import DynamicHeading from "@/components/DynamicHeading";
 import BlogWidget from "@/components/blogs/BlogWidget";
 import BlogError from "@/components/blogs/BlogError";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
-import SwiperCore, { Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 
 // Install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
@@ -67,7 +67,8 @@ const InternshipPage = () => {
     },
     {
       title: "Frontend Development",
-      description: "Create stunning user interfaces with modern frontend tools.",
+      description:
+        "Create stunning user interfaces with modern frontend tools.",
       image: "/frontend.jpg",
     },
     {
@@ -129,114 +130,117 @@ const InternshipPage = () => {
     <div className="text-white font-sans">
       {/* Existing sections */}
       <section className="relative h-full flex flex-col md:flex-row overflow-hidden justify-center items-center">
-  {/* Left side: Image */}
-  <div className="w-full lg:w-[40%] h-[50%] lg:h-full relative flex justify-center items-center">
-  <Image
-  src="/internship-bg.png"
-  alt="Internship Background"
-  width={600}
-  height={400}
-  className="w-full h-full object-cover"
-/>
+        {/* Left side: Image */}
+        <div className="w-full lg:w-[40%] h-[50%] lg:h-full relative flex justify-center items-center">
+          <Image
+            src="/internship-bg.png"
+            alt="Internship Background"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-  </div>
-
-  {/* Right side: Content */}
-  <div className="w-full lg:w-[60%] flex items-center justify-center p-5 lg:p-16 relative z-20">
-    <div className="text-left text-white p-[10px]">
-      {/* Heading */}
-      <h1 className="pb-3 text-[30px] xl:text-[50px] lg:text-[44px] md:text-[40px] font-semibold">
-      &quot;Without active projects,&quot; <br />
-  <span
-    className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
-  >
-    &quot;Your growth takes a halt&quot;
-  </span>
-  <br />
-  <span>&quot;You&apos;re not evolving&quot;
-  </span>
-  <br />
-  <span
-    className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
-  >
-    &quot;You're stuck in default!&quot;
-  </span>
-</h1>
-      {/* Buttons */}
-      <div className="mt-[30px] flex flex-row gap-5">
-        <Link href={"#internships"}>
-          <button className="flex border border-gray-500 items-center text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white font-bold rounded">
-            Explore more
-          </button>
-        </Link>
-        <Link href="/contact">
-          <button className="flex items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 hover:border hover:border-white text-white font-medium rounded">
-            Contact us
-          </button>
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
+        {/* Right side: Content */}
+        <div className="w-full lg:w-[60%] flex items-center justify-center p-5 lg:p-16 relative z-20">
+          <div className="text-left text-white p-[10px]">
+            {/* Heading */}
+            <h1 className="pb-3 text-[30px] xl:text-[50px] lg:text-[44px] md:text-[40px] font-semibold">
+              &quot;Without active projects,&quot; <br />
+              <span
+                className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
+              >
+                &quot;Your growth takes a halt&quot;
+              </span>
+              <br />
+              <span>&quot;You&apos;re not evolving&quot;</span>
+              <br />
+              <span
+                className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
+              >
+                &quot;You're stuck in default!&quot;
+              </span>
+            </h1>
+            {/* Buttons */}
+            <div className="mt-[30px] flex flex-row gap-5">
+              <Link href={"#internships"}>
+                <button className="flex border border-gray-500 items-center text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white font-bold rounded">
+                  Explore more
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="flex items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 hover:border hover:border-white text-white font-medium rounded">
+                  Contact us
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Internship Topics Section */}
       <section id="internships" className="pb-5 mx-4 lg:mx-8">
-  <div className="container mx-auto px-4">
-    {/* Heading */}
-    <div className="text-center mb-12">
-      <DynamicHeading 
-        FirstContent={"Featured "} 
-        FirstsubContent={"Internship Programs"} 
-        className="text-4xl font-bold text-white"
-      />
-    </div>
+        <div className="container mx-auto px-4">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <DynamicHeading
+              FirstContent={"Featured "}
+              FirstsubContent={"Internship Programs"}
+              className="text-4xl font-bold text-white"
+            />
+          </div>
 
-    {/* Grid of Internship Topics */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {internshipTopics.map((topic, index) => (
-        <div
-          key={index}
-          className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-        >
-          <a href={`/internship/${topic.title.toLowerCase().replace(/\s+/g, "-")}`} className="block">
-            <div className="relative">
-              <Image
-                src={topic.image}
-                alt={topic.title}
-                width={600}
-                height={400}
-                className="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-500 opacity-0 hover:opacity-30 transition-opacity duration-300"></div>
-            </div>
-          </a>
-          <div className="p-4 sm:p-6 text-left group">
-            <a
-              href={`/internship/${topic.title.toLowerCase().replace(/\s+/g, "-")}`}
-              style={{ 
-                color: 'transparent', 
-                background: 'linear-gradient(to right, #3b83f6, #008000)', 
-                backgroundClip: 'text' 
-              }}
-              className="block mb-2 sm:mb-4 text-lg sm:text-xl font-bold hover:text-white transition-colors duration-300"
-            >
-              {topic.title}
-            </a>
+          {/* Grid of Internship Topics */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {internshipTopics.map((topic, index) => (
+              <div
+                key={index}
+                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              >
+                <a
+                  href={`/internship/${topic.title
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  className="block"
+                >
+                  <div className="relative">
+                    <Image
+                      src={topic.image}
+                      alt={topic.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-500 opacity-0 hover:opacity-30 transition-opacity duration-300"></div>
+                  </div>
+                </a>
+                <div className="p-4 sm:p-6 text-left group">
+                  <a
+                    href={`/internship/${topic.title
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                    style={{
+                      color: "transparent",
+                      background: "linear-gradient(to right, #3b83f6, #008000)",
+                      backgroundClip: "text",
+                    }}
+                    className="block mb-2 sm:mb-4 text-lg sm:text-xl font-bold hover:text-white transition-colors duration-300"
+                  >
+                    {topic.title}
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-5 text-gray-900">
         <div className="container mx-auto text-center mb-12">
-          <DynamicHeading 
-            FirstContent={"Why Choose "} 
-            FirstsubContent={"Our Internships?"} 
+          <DynamicHeading
+            FirstContent={"Why Choose "}
+            FirstsubContent={"Our Internships?"}
             className="text-4xl font-bold text-white"
           />
           <p className="text-lg text-white max-w-3xl mx-auto">
@@ -263,7 +267,8 @@ const InternshipPage = () => {
             <div className="text-5xl mb-4">📜</div>
             <h3 className="text-xl font-bold mb-2">Certification</h3>
             <p className="text-white text-center">
-              Get certified upon successful completion of the internship program.
+              Get certified upon successful completion of the internship
+              program.
             </p>
           </div>
           <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
@@ -278,52 +283,53 @@ const InternshipPage = () => {
 
       {/* Success Stories Carousel */}
       <section className="py- text-white">
-  <div className="container mx-auto text-center mb-12">
-    <DynamicHeading
-      FirstContent={"Success "}
-      FirstsubContent={"Stories"}
-      className="text-4xl font-bold text-white"
-    />
-  </div>
+        <div className="container mx-auto text-center mb-12">
+          <DynamicHeading
+            FirstContent={"Success "}
+            FirstsubContent={"Stories"}
+            className="text-4xl font-bold text-white"
+          />
+        </div>
 
-  <div className="container mx-auto">
-    <Swiper
-      spaceBetween={30}
-      slidesPerView={1}
-      pagination={{ clickable: true }}
-      navigation
-      className="mySwiper"
-    >
-      {successStories.map((story, index) => (
-        <SwiperSlide
-          key={index}
-          className="bg-gradient-to-r from-[#3b83f631] to-[#00800038] border border-gray-500 rounded-lg shadow-lg p-6"
-        >
-          {/* Image Section */}
-          <div className="mb-4 text-center">
-            <Image
-              src={story.image}
-              alt={story.name}
-              width={150}
-              height={150}
-              className="rounded-full shadow-lg mx-auto object-cover"
-            />
-          </div>
+        <div className="container mx-auto">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            navigation
+            className="mySwiper"
+          >
+            {successStories.map((story, index) => (
+              <SwiperSlide
+                key={index}
+                className="bg-gradient-to-r from-[#3b83f631] to-[#00800038] border border-gray-500 rounded-lg shadow-lg p-6"
+              >
+                {/* Image Section */}
+                <div className="mb-4 text-center">
+                  <Image
+                    src={story.image}
+                    alt={story.name}
+                    width={150}
+                    height={150}
+                    className="rounded-full shadow-lg mx-auto object-cover"
+                  />
+                </div>
 
-          {/* Story Content */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-2">{story.name}</h3>
-            <p className="text-lg text-white mb-4 italic">
-              "{story.testimonial}"
-            </p>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</section>
+                {/* Story Content */}
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {story.name}
+                  </h3>
 
-
+                  <p className="text-lg text-white mb-4 italic">
+                    &quot;{story.testimonial}&quot;
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
 
       {/* Blog Section */}
       <section className="container lg:w-[90%] w-full px-4 py-10">

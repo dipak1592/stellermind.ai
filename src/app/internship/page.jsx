@@ -54,7 +54,7 @@ const InternshipPage = () => {
   // Internship data for topics
   const internshipTopics = [
     {
-      title: "ai-ml",
+      title: "AI-ML",
       description:
         "Dive deep into the world of Artificial Intelligence and Machine Learning.",
       image: "/ai-ml.jpg",
@@ -91,40 +91,40 @@ const InternshipPage = () => {
   ];
 
   // Success stories data
-  const successStories = [
-    {
-      name: "John Doe",
-      testimonial: "This internship changed my career path for the better!",
-      image: "/team/default.svg",
-    },
-    {
-      name: "Jane Smith",
-      testimonial:
-        "I gained real-world experience that helped me land my dream job.",
-      image: "/team/default.svg",
-    },
-    {
-      name: "Mike Johnson",
-      testimonial: "The mentors and projects were fantastic. Highly recommend!",
-      image: "/team/default.svg",
-    },
-    {
-      name: "John Doe",
-      testimonial: "This internship changed my career path for the better!",
-      image: "/team/default.svg",
-    },
-    {
-      name: "Jane Smith",
-      testimonial:
-        "I gained real-world experience that helped me land my dream job.",
-      image: "/team/default.svg",
-    },
-    {
-      name: "Mike Johnson",
-      testimonial: "The mentors and projects were fantastic. Highly recommend!",
-      image: "/team/default.svg",
-    },
-  ];
+  // const successStories = [
+  //   {
+  //     name: "John Doe",
+  //     testimonial: "This internship changed my career path for the better!",
+  //     image: "/team/default.svg",
+  //   },
+  //   {
+  //     name: "Jane Smith",
+  //     testimonial:
+  //       "I gained real-world experience that helped me land my dream job.",
+  //     image: "/team/default.svg",
+  //   },
+  //   {
+  //     name: "Mike Johnson",
+  //     testimonial: "The mentors and projects were fantastic. Highly recommend!",
+  //     image: "/team/default.svg",
+  //   },
+  //   {
+  //     name: "John Doe",
+  //     testimonial: "This internship changed my career path for the better!",
+  //     image: "/team/default.svg",
+  //   },
+  //   {
+  //     name: "Jane Smith",
+  //     testimonial:
+  //       "I gained real-world experience that helped me land my dream job.",
+  //     image: "/team/default.svg",
+  //   },
+  //   {
+  //     name: "Mike Johnson",
+  //     testimonial: "The mentors and projects were fantastic. Highly recommend!",
+  //     image: "/team/default.svg",
+  //   },
+  // ];
 
   return (
     <div className="text-white font-sans">
@@ -146,19 +146,19 @@ const InternshipPage = () => {
           <div className="text-left text-white p-[10px]">
             {/* Heading */}
             <h1 className="pb-3 text-[30px] xl:text-[50px] lg:text-[44px] md:text-[40px] font-semibold">
-              &quot;Without active projects,&quot; <br />
+              Without active projects, <br />
               <span
                 className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
               >
-                &quot;Your growth takes a halt&quot;
+               Your growth takes a halt
               </span>
               <br />
-              <span>&quot;You&apos;re not evolving&quot;</span>
+              <span>You&apos;re not evolving</span>
               <br />
               <span
                 className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
               >
-                &quot;You&apos;re stuck in default!&quot;
+                You&apos;re stuck in default!
               </span>
             </h1>
             {/* Buttons */}
@@ -237,52 +237,53 @@ const InternshipPage = () => {
 
       {/* Why Choose Us Section */}
       <section className="py-5 text-gray-900">
-        <div className="container mx-auto text-center mb-12">
-          <DynamicHeading
-            FirstContent={"Why Choose "}
-            FirstsubContent={"Our Internships?"}
-            className="text-4xl font-bold text-white"
-          />
-          <p className="text-lg text-white max-w-3xl mx-auto">
-            We offer unique opportunities to work on real-world projects, guided
-            by industry experts, and pave the way for a successful career.
-          </p>
-        </div>
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
-            <div className="text-5xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold mb-2">Hands-On Experience</h3>
-            <p className="text-white text-center">
-              Work on real-world projects and gain industry-relevant skills.
-            </p>
-          </div>
-          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
-            <div className="text-5xl mb-4">🎓</div>
-            <h3 className="text-xl font-bold mb-2">Expert Mentors</h3>
-            <p className="text-white text-center">
-              Learn from industry professionals with years of experience.
-            </p>
-          </div>
-          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
-            <div className="text-5xl mb-4">📜</div>
-            <h3 className="text-xl font-bold mb-2">Certification</h3>
-            <p className="text-white text-center">
-              Get certified upon successful completion of the internship
-              program.
-            </p>
-          </div>
-          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
-            <div className="text-5xl mb-4">💼</div>
-            <h3 className="text-xl font-bold mb-2">Career Opportunities</h3>
-            <p className="text-white text-center">
-              Boost your career with internship experience from top companies.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto text-center mb-12">
+    <DynamicHeading
+      FirstContent={"Why Choose "}
+      FirstsubContent={"Our Internships?"}
+      className="text-4xl font-bold text-white"
+    />
+    <p className="text-lg text-white max-w-3xl mx-auto">
+      We offer unique opportunities to work on real-world projects, guided
+      by industry experts, and pave the way for a successful career.
+    </p>
+  </div>
+  <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
+      <div className="text-5xl mb-4">🚀</div>
+      <h3 className="md:text-xl text-[18px] font-bold mb-2">Hands-On Experience</h3>
+      <p className="text-white text-center">
+        Work on real-world projects and gain industry-relevant skills.
+      </p>
+    </div>
+    <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
+      <div className="text-5xl mb-4">🎓</div>
+      <h3 className="text-xl font-bold mb-2">Expert Mentors</h3>
+      <p className="text-white text-center">
+        Learn from industry professionals with years of experience.
+      </p>
+    </div>
+    <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
+      <div className="text-5xl mb-4">📜</div>
+      <h3 className="text-xl font-bold mb-2">Certification</h3>
+      <p className="text-white text-center">
+        Get certified upon successful completion of the internship
+        program.
+      </p>
+    </div>
+    <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-md">
+      <div className="text-5xl mb-4">💼</div>
+      <h3 className="text-xl font-bold mb-2">Career Opportunities</h3>
+      <p className="text-white text-center">
+        Boost your career with internship experience from top companies.
+      </p>
+    </div>
+    
+  </div>
+</section>
 
       {/* Success Stories Carousel */}
-      <section className="py- text-white">
+      {/* <section className="py- text-white">
         <div className="container mx-auto text-center mb-12">
           <DynamicHeading
             FirstContent={"Success "}
@@ -305,7 +306,7 @@ const InternshipPage = () => {
                 className="bg-gradient-to-r from-[#3b83f631] to-[#00800038] border border-gray-500 rounded-lg shadow-lg p-6"
               >
                 {/* Image Section */}
-                <div className="mb-4 text-center">
+                {/* <div className="mb-4 text-center">
                   <Image
                     src={story.image}
                     alt={story.name}
@@ -316,7 +317,7 @@ const InternshipPage = () => {
                 </div>
 
                 {/* Story Content */}
-                <div className="text-center">
+                {/* <div className="text-center">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {story.name}
                   </h3>
@@ -329,8 +330,8 @@ const InternshipPage = () => {
             ))}
           </Swiper>
         </div>
-      </section>
-
+      </section> */} 
+      
       {/* Blog Section */}
       <section className="container lg:w-[90%] w-full px-4 py-10">
         <DynamicHeading FirstContent={"Our"} FirstsubContent={"Blogs"} />

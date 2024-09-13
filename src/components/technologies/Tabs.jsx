@@ -40,21 +40,22 @@ function Tabs({ tabs, activetab }) {
       />
       <div className="text-white container">
         <main className="flex justify-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id} // Use tab.id as the key for unique identification
-                className={`px-6 py-3 text-[16px] sm:text-[18px] lg:text-[20px] font-medium rounded-md border border-gray-600 transition-colors duration-300 w-full sm:w-auto ${
-                  activeTab === tab.id
-                    ? "bg-[#3b83f631] border-blue-500 text-blue-400"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:border-gray-500"
-                }`}
-                onClick={() => setActiveTab(tab.id)} // Set active tab by id
-              >
-                {tab.label} {/* Render tab label */}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-4 mb-8 border border-gray-600 ">
+  {tabs.map((tab, index) => (
+    <button
+      key={tab.id} // Use tab.id for unique identification
+      className={`px-4 py-2 text-[20px] font-medium rounded-[2px] transition-colors duration-300 w-full sm:w-auto ${
+        activeTab === tab.id
+          ? "bg-[#3b83f631] border-b-[2px] border-blue-500 text-white"
+          : "text-white hover:bg-gray-700 hover:border-gray-500"
+      }`}
+      onClick={() => setActiveTab(tab.id)} // Set active tab by id
+    >
+      {tab.label} {/* Render tab label */}
+    </button>
+  ))}
+</div>
+
         </main>
         <TechContent /> {/* Render the content for the active tab */}
       </div>

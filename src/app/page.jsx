@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import BrandSlider from "@/components/BrandSlider";
 import DynamicHeading from "@/components/DynamicHeading";
 import HeroStatistics from "@/components/HeroStatistics";
 import ServiceBoxes from "@/components/ServiceBoxes";
@@ -18,6 +17,8 @@ import CallToMeet from "@/components/CallToMeet";
 import { FaArrowRightLong } from "react-icons/fa6";
 import BlogWidget from "@/components/blogs/BlogWidget";
 import BlogError from "@/components/blogs/BlogError";
+import BrandSlider from "@/components/BrandSlider";
+
 
 // Google Fonts
 const playfair = Playfair_Display({
@@ -74,11 +75,11 @@ const HomePage = () => {
 
   const tabs = [
     { id: "AI/ML", label: "AI/ML" },
-    { id: "AR", label: "Augmented Reality" },
-  { id: "Backend", label: "Backend Development" },
-  { id: "Frontend", label: "Frontend Development" },
-  { id: "CMS", label: "Content Management Systems" },
-  { id: "Mobile", label: "Mobile Development" },
+    { id: "AR", label: "AR" },
+  { id: "Backend", label: "Backend " },
+  { id: "Frontend", label: "Frontend " },
+  { id: "CMS", label: "CMS" },
+  { id: "Mobile", label: "Mobile " },
     
   ];
 
@@ -221,7 +222,7 @@ const HomePage = () => {
 
       <HireDeveloper />
 
-      <section className="container mx-auto px-4 py-10">
+      <section className="container mx-auto px-4 pt-10">
   <DynamicHeading FirstContent={"Internship"} FirstsubContent={"Opportunities"} />
   
   <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
@@ -271,7 +272,7 @@ const HomePage = () => {
 
 
 
-      <section className="container lg:w-[90%] w-full px-4 py-10">
+      <section className="container lg:w-[90%] w-full px-4 py-5">
         <DynamicHeading FirstContent={"Our"} FirstsubContent={"Blogs"} />
 
         {isLoading ? (

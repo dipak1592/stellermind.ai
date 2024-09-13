@@ -158,7 +158,7 @@ const InternshipPage = () => {
               <span
                 className={`bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text`}
               >
-                &quot;You're stuck in default!&quot;
+                &quot;You&apos;re stuck in default!&quot;
               </span>
             </h1>
             {/* Buttons */}

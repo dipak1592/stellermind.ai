@@ -16,9 +16,9 @@ import {
 import { GrInstagram } from "react-icons/gr";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 export const metadata = {
-  title: "Unveiling StellarMind: Pioneers of Digital Evolution and Innovation",
+  title: "About Stellarmind AI - Pioneers in AI, ML, and IoT Solutions",
   description:
-    "Learn about our journey, values, and unwavering commitment to driving digital transformation.",
+    "Learn about Stellarmind AI, a leader in AI, ML, and IoT development services, transforming industries with smart and scalable solutions.",
 };
 
 export default function page() {

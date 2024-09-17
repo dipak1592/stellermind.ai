@@ -96,7 +96,7 @@ const HomePage = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+917863889382,16506670749",
+      "telephone": "+917863889382,16506670749", 
       "contactType": "Customer Service",
       "areaServed": "India, USA",
       "availableLanguage": "English",
@@ -106,10 +106,10 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <title>StellarMind | Home</title>
+        <title>Stellarmind AI - AI/ML and IoT Solutions for Modern Enterprises</title>
         <meta
           name="description"
-          content="Explore advanced tech solutions with StellarMind. Leading in AI, Web Development, and more."
+          content="Explore Stellarmind's AI/ML and IoT solutions, driving innovation in enterprises with cloud-powered mobile app development and automation services."
         />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}

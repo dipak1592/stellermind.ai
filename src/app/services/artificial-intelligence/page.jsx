@@ -9,8 +9,8 @@ import ServiceBox from "@/components/servicepage/ServiceBox";
 import AI from "@/components/technologies/AI";
 
 export const metadata = {
-  title: "Unleash the Power of AI: Elevate Your Business with StellarMind.AI",
-  description: "Dive into the realm of limitless possibilities with StellarMind.AI's cutting-edge AI services.Let us empower your business to thrive in the age of artificial intelligence.",
+  title: "Artificial Intelligence Services - Tailored AI Solutions for Enterprises",
+  description: "Leverage Stellarmind's AI expertise to implement custom AI solutions for your enterprise. Boost efficiency and drive growth with AI.",
 };
 
 function page() {

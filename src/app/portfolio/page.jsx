@@ -71,8 +71,8 @@ export default function Portfolio() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Portfolio",
-            "description": "Explore our diverse portfolio showcasing digital solutions including AI/ML, Unity, AR, Web, and Mobile applications.",
+            "name": "Stellarmind AI Portfolio - Showcase of Cutting-Edge AI and IoT Solutions",
+            "description": "Explore Stellarmind AI’s portfolio of innovative projects in AI, ML, IoT, and cloud computing. Discover our success stories.",
             "url": "https://stellarmind.ai/portfolio",
             "mainEntity": {
               "@type": "WebPage",

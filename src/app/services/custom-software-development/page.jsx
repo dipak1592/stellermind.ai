@@ -11,8 +11,8 @@ import Tabs from '@/components/technologies/Tabs';
 import React from 'react'
 
 export const metadata = {
-  title: "Bespoke Solutions, Tailored for Success: Custom Software Development by StellarMind.AI",
-  description: "Experience the power of personalized innovation with StellarMind.AI's custom software development services.",
+  title: "Custom Software Development - Tailored Solutions for Modern Businesses",
+  description: "Get custom software solutions from Stellarmind AI, tailored to meet the unique needs of your business and industry challenges.",
 };
 
 function page() {

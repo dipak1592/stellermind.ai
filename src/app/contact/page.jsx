@@ -659,7 +659,8 @@ dangerouslySetInnerHTML={{
       "postalCode": "380054",
       "addressCountry": "IN",
     },
-    "description": "StellarMind provides innovative digital solutions and consultation services. We are committed to delivering quality service and support. Reach out to us to revolutionize your digital experience.",
+    "headline": "Contact Stellarmind AI - Get in Touch for Custom AI and IoT Solutions",
+    "description": "Contact Stellarmind AI for custom AI/ML and IoT solutions. Let us help you transform your business with advanced technology.",
     "sameAs": [
       "https://www.facebook.com/stellarmind.ai",
       "https://twitter.com/stellarmind.ai",

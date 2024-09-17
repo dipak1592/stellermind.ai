@@ -14,8 +14,8 @@ import React from 'react'
 import { DiAndroid } from "react-icons/di";
 
 export const metadata = {
-  title: "Step into the Future: Augmented Reality Redefined by StellarMind.AI",
-  description: "Immerse yourself in a world where reality meets innovation. With StellarMind.AI's augmented reality solutions, unlock new dimensions of engagement and interactivity.",
+  title: "Augmented Reality Services - Enhance Business Operations with AR",
+  description: "Enhance your business with Augmented Reality from Stellarmind AI, transforming operations with cutting-edge AR technology.",
 };
 function page() {
   const services = [

@@ -54,38 +54,38 @@ const InternshipPage = () => {
   // Internship data for topics
   const internshipTopics = [
     {
-      title: "AI-ML",
+      title: "AI/ML Internship at Stellarmind AI - Learn with Industry Leaders",
       description:
-        "Dive deep into the world of Artificial Intelligence and Machine Learning.",
+        "Kickstart your career in AI and ML with Stellarmind AI's internship, designed to offer real-world experience and industry insights.",
       image: "/ai-ml.jpg",
     },
     {
-      title: "Fullstack Development",
+      title: "Fullstack Development Internship at Stellarmind AI - Become a Versatile Developer",
       description:
-        "Master both frontend and backend to build full-fledged web applications.",
+        "Develop your skills in both frontend and backend technologies with Stellarmind AI’s fullstack development internship, designed for versatility.",
       image: "/fullstack.jpg",
     },
     {
-      title: "Frontend Development",
+      title: "Frontend Development Internship at Stellarmind AI - Master Web Technologies",
       description:
-        "Create stunning user interfaces with modern frontend tools.",
+        "Master frontend development with Stellarmind AI’s internship, where you will work on real-world projects and learn modern web technologies.",
       image: "/frontend.jpg",
     },
     {
-      title: "Backend Development",
-      description: "Build secure and scalable server-side applications.",
+      title: "Backend Development Internship at Stellarmind AI - Enhance Your Coding Skills",
+      description: "Join the Stellarmind AI backend development internship to sharpen your coding skills and contribute to cutting-edge backend technologies.",
       image: "/backend.jpg",
     },
     {
-      title: "DevOps",
+      title: "DevOps Internship at Stellarmind AI - Build the Future of Continuous Delivery",
       description:
-        "Automate workflows and streamline software delivery with DevOps practices.",
+        "Stellarmind AI offers a DevOps internship to help you master continuous integration and deployment strategies in the real world.",
       image: "/devops.jpg",
     },
     {
-      title: "Cyber Security",
+      title: "Cybersecurity Internship at Stellarmind AI - Secure the Future",
       description:
-        "Enhance your skills in safeguarding applications and networks from threats.",
+        "Stellarmind AI’s cybersecurity internship offers a chance to learn the essentials of securing digital infrastructures and protecting data.",
       image: "/cyber-security.jpg",
     },
   ];

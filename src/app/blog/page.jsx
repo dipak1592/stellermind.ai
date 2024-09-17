@@ -65,8 +65,8 @@ export default function Blog() {
               "@type": "WebPage",
               "@id": "https://stellarmind.ai/blog"
             },
-            "headline": "StellarMind's Blog Universe",
-            "description": "Discover the latest insights, expert tips, and industry trends in AI/ML, software development, DevOps integration, cloud solutions, and more with StellarMind's comprehensive blog.",
+            "headline": "Stellarmind AI Blog - Insights on AI, ML, IoT and Cloud Development",
+            "description": "Stay updated with Stellarmind AI’s latest insights on AI, ML, IoT, and automation. Discover innovations driving enterprise transformation.",
             "author": {
               "@type": "Organization",
               "name": "StellarMind"

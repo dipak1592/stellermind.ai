@@ -17,6 +17,7 @@ async function getData(slug) {
   }
   return res.json();
 }
+
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
   const slug = params.slug;

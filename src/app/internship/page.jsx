@@ -54,78 +54,57 @@ const InternshipPage = () => {
   // Internship data for topics
   const internshipTopics = [
     {
+      slug:"ai-ml",
       title: "AI/ML Internship at Stellarmind AI - Learn with Industry Leaders",
       description:
         "Kickstart your career in AI and ML with Stellarmind AI's internship, designed to offer real-world experience and industry insights.",
       image: "/ai-ml.jpg",
+      duration: "3-6 months",
+      location: "Remote or On-site",
+      skills: ["Deep Learning", "Natural Language Processing", "Computer Vision", "Python", "TensorFlow"],
+      requirements: "Basic knowledge of Python and machine learning concepts.",
+      benefits: [
+        "Hands-on experience with industry-standard tools and techniques.",
+        "Networking opportunities with professionals in the field.",
+        "Access to exclusive workshops and seminars."
+      ],
     },
     {
-      title: "Fullstack Development Internship at Stellarmind AI - Become a Versatile Developer",
+      slug: "fullstack-development",
+      title:"Fullstack Development Internship at Stellarmind AI - Become a Versatile Developer",
       description:
         "Develop your skills in both frontend and backend technologies with Stellarmind AI’s fullstack development internship, designed for versatility.",
       image: "/fullstack.jpg",
     },
     {
+      slug:'frontend-development',
       title: "Frontend Development Internship at Stellarmind AI - Master Web Technologies",
       description:
         "Master frontend development with Stellarmind AI’s internship, where you will work on real-world projects and learn modern web technologies.",
       image: "/frontend.jpg",
     },
     {
-      title: "Backend Development Internship at Stellarmind AI - Enhance Your Coding Skills",
+      slug: "backend-development",
+      title:"Backend Development Internship at Stellarmind AI - Enhance Your Coding Skills",
       description: "Join the Stellarmind AI backend development internship to sharpen your coding skills and contribute to cutting-edge backend technologies.",
       image: "/backend.jpg",
     },
     {
-      title: "DevOps Internship at Stellarmind AI - Build the Future of Continuous Delivery",
+      slug: "devops",
+      title:"DevOps Internship at Stellarmind AI - Build the Future of Continuous Delivery",
       description:
         "Stellarmind AI offers a DevOps internship to help you master continuous integration and deployment strategies in the real world.",
       image: "/devops.jpg",
     },
     {
-      title: "Cybersecurity Internship at Stellarmind AI - Secure the Future",
+      slug: "cyber-security",
+      title:"Cybersecurity Internship at Stellarmind AI - Secure the Future",
       description:
         "Stellarmind AI’s cybersecurity internship offers a chance to learn the essentials of securing digital infrastructures and protecting data.",
       image: "/cyber-security.jpg",
     },
   ];
-
-  // Success stories data
-  // const successStories = [
-  //   {
-  //     name: "John Doe",
-  //     testimonial: "This internship changed my career path for the better!",
-  //     image: "/team/default.svg",
-  //   },
-  //   {
-  //     name: "Jane Smith",
-  //     testimonial:
-  //       "I gained real-world experience that helped me land my dream job.",
-  //     image: "/team/default.svg",
-  //   },
-  //   {
-  //     name: "Mike Johnson",
-  //     testimonial: "The mentors and projects were fantastic. Highly recommend!",
-  //     image: "/team/default.svg",
-  //   },
-  //   {
-  //     name: "John Doe",
-  //     testimonial: "This internship changed my career path for the better!",
-  //     image: "/team/default.svg",
-  //   },
-  //   {
-  //     name: "Jane Smith",
-  //     testimonial:
-  //       "I gained real-world experience that helped me land my dream job.",
-  //     image: "/team/default.svg",
-  //   },
-  //   {
-  //     name: "Mike Johnson",
-  //     testimonial: "The mentors and projects were fantastic. Highly recommend!",
-  //     image: "/team/default.svg",
-  //   },
-  // ];
-
+  
   return (
     <div className="text-white font-sans">
       {/* Existing sections */}
@@ -198,9 +177,7 @@ const InternshipPage = () => {
                 className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
               >
                 <a
-                  href={`/internship/${topic.title
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
+                   href={`/internship/${topic.slug}`}
                   className="block"
                 >
                   <div className="relative">
@@ -216,9 +193,7 @@ const InternshipPage = () => {
                 </a>
                 <div className="p-4 sm:p-6 text-left group">
                   <a
-                    href={`/internship/${topic.title
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
+                     href={`/internship/${topic.title.toLowerCase().replace(/\s+/g, "-")}`}
                     style={{
                       color: "transparent",
                       background: "linear-gradient(to right, #3b83f6, #008000)",

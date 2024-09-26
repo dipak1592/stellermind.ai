@@ -13,8 +13,8 @@ import React from 'react'
 import { DiAndroid } from "react-icons/di";
 
 export const metadata = {
-  title: "Efficiency Redefined: Containerization and Orchestration Solutions by StellarMind.AI",
-  description: "From Docker to Kubernetes, we architect scalable and resilient infrastructures that power your applications with agility and reliability. Let's orchestrate your success in the digital era.",
+  title: "Containerization and Orchestration | StellarMind - Scalable Cloud Solutions",
+  description: "Streamline your cloud infrastructure with StellarMind’s containerization and orchestration services, enabling scalable, efficient, and AI/ML-driven cloud computing.",
 };
 function page() {
   const services = [

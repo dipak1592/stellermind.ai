@@ -16,9 +16,9 @@ import {
 import { GrInstagram } from "react-icons/gr";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 export const metadata = {
-  title: "About Stellarmind AI - Pioneers in AI, ML, and IoT Solutions",
+  title: "StellarMind AI | Pioneers in AI/ML and IoT Solutions",
   description:
-    "Learn about Stellarmind AI, a leader in AI, ML, and IoT development services, transforming industries with smart and scalable solutions.",
+    "Discover StellarMind's journey in providing cutting-edge AI/ML and IoT solutions, delivering transformative cloud-powered and automation services for enterprises globally.",
 };
 
 export default function page() {
@@ -42,12 +42,12 @@ export default function page() {
       "https://www.facebook.com/StellarMind/",
       "https://www.instagram.com/stellarmind_ai",
     ],
-    description:
-      "StellarMind is a leading and globally accepted IT consultant and solution provider in AI/ML, IoT, cloud applications, microservices, mobile apps, DevOps, and AR/VR technology.",
+    "headline": "StellarMind AI | Pioneers in AI/ML and IoT Solutions",
+    "description":"Discover StellarMind's journey in providing cutting-edge AI/ML and IoT solutions, delivering transformative cloud-powered and automation services for enterprises globally.",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      url: "https://stellarmind.ai/contact",
+      url: "https://stellarmind.ai/about",
     },
   };
 

@@ -12,8 +12,8 @@ import Image from 'next/image';
 import React from 'react'
 import { DiAndroid } from "react-icons/di";
 export const metadata = {
-  title: "DevOps Consulting - Streamline Your Development with DevOps Expertise",
-  description: "Optimize your development workflow with Stellarmind AI's DevOps consulting services, focusing on continuous integration and delivery.",
+  title: "DevOps Consulting Services | StellarMind - Automation and Cloud Experts",
+  description: "Optimize your development pipeline with StellarMind’s DevOps consulting. Harness automation, AI/ML, and cloud technologies for seamless integration and scalability.",
 };
 function page() {
   const services = [

@@ -13,8 +13,8 @@ import React from 'react'
 import { DiAndroid } from "react-icons/di";
 
 export const metadata = {
-  title: "Accelerate Your Delivery Pipeline: CI/CD Services by StellarMind.AI",
-  description: "Supercharge your development lifecycle with StellarMind.AI's CI/CD services. From automated testing to seamless deployments, we optimize your processes for speed, reliability, and efficiency.",
+  title: "CI/CD Development Services | StellarMind - Streamlined AI/ML & IoT Integration",
+  description: "Accelerate your software delivery with StellarMind’s CI/CD development, integrating AI/ML and IoT solutions for faster, automated, and cloud-enabled releases.",
 };
 function page() {
   const services = [

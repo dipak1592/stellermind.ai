@@ -14,8 +14,8 @@ import { DiAndroid } from "react-icons/di";
 
 
 export const metadata = {
-  title: "Crafting Digital Experiences: Web Development Mastery by StellarMind.AI",
-  description: "Elevate your online presence with StellarMind.AI's expert web development services.Let's create a website that not only impresses but also drives results for your business.",
+  title: "Scalable Web Development with AI/ML Integration | StellarMind",
+  description: "StellarMind offers scalable web development solutions powered by AI/ML and IoT, ensuring your digital platform is future-ready and optimized for performance.",
 };
 
 function page() {

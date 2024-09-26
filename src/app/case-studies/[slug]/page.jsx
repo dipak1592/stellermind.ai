@@ -76,9 +76,9 @@ export default function CaseStudyDetail() {
       <div className="py-2 text-center md:text-left overflow-hidden md:w-[60%] lg:w-[60%] mx-auto">
         <div className="w-[100%] m-2 gap-2 text-white">
           <h2 className="text-3xl font-bold text  green-800 ">Client Overview</h2>
-          <h2 className="font-bold text-white text-[18px] sm:text-xl md:text-2xl mb-4">
+          <p className="text-white text-[12px] sm:text-xl md:text-2xl mb-4">
             {caseStudy.ClientOverview}
-          </h2>
+          </p>
         </div>
       </div>
 
@@ -87,12 +87,12 @@ export default function CaseStudyDetail() {
 
       <div className="py-2 text-center md:text-left overflow-hidden w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto">
         <div className="w-[100%] m-2 gap-2 text-white">
-          <h3 className="font-bold mt-2 mb-2 md:mt-2 md:mb-2 text-[24px] sm:text-[30px] md:text-[40px] text-center md:text-left underline underline-offset-4 decoration-blue-500">
-            <span className="bg-gradient-to-r from-blue-500 to-green-270 text-transparent bg-clip-text">
+          <h3 className="font-bold mt-2 mb-2 md:mt-2 md:mb-2 text-[24px] sm:text-[30px] md:text-[40px] text-center md:text-left">
+            <span className="text-3xl font-bold text-blue-500">
               Challenges
             </span>
           </h3>
-          <b className="text-white text-[18px] sm:text-xl md:text-2xl mb-4">{caseStudy.challenge}</b>
+          <p className="text-white text-[18px] sm:text-xl md:text-2xl mb-4">{caseStudy.challenge}</p>
           <ul className="pt-9 list-none text-white gap-4">
             {caseStudy.challengePoints.map((point, index) => (
               <li key={index} className="flex items-center mb-2 gap-2 text-[14px] sm:text-[16px] md:text-xl">
@@ -106,12 +106,12 @@ export default function CaseStudyDetail() {
         </div>
 
         <div className="w-[100%] m-2 gap-2 text-white mt-8">
-          <h3 className="font-bold mt-2 mb-2 md:mt-2 md:mb-2 text-[24px] sm:text-[30px] md:text-[40px] text-center md:text-left underline underline-offset-4 decoration-blue-500">
-            <span className="bg-gradient-to-r from-blue-500 to-green-270 text-transparent bg-clip-text">
+          <p className="font-bold mt-2 mb-2 md:mt-2 md:mb-2 text-[24px] sm:text-[30px] md:text-[40px] text-center md:text-left ">
+            <span className="text-3xl font-bold text-blue-500">
               Solution
             </span>
-          </h3>
-          <b className="text-white text-[18px] sm:text-xl md:text-2xl mb-4">{caseStudy.solution}</b>
+          </p>
+          <p className="text-white text-[18px] sm:text-xl md:text-2xl mb-4">{caseStudy.solution}</p>
           <ul className="pt-9 list-none text-white gap-4">
             {caseStudy.solutionPoints.map((point, index) => (
               <li key={index} className="flex items-center mb-2 gap-2 text-[14px] sm:text-[16px] md:text-xl">
@@ -131,9 +131,9 @@ export default function CaseStudyDetail() {
       <div className="py-2 text-center md:text-left overflow-hidden md:w-[60%] lg:w-[60%] mx-auto">
         <div className="w-[100%] m-2 gap-2 text-white">
           <h2 className="text-3xl font-bold text from-green-800 to-blue-800 ">Conclusion</h2>
-          <h2 className="font-bold text-white text-[18px] sm:text-xl md:text-2xl mb-4">
+          <p className=" text-white text-[16px] sm:text-xl md:text-2xl mb-4">
             {caseStudy.Conclusion}
-          </h2>
+          </p>
         </div>
       </div>
       {/* Related Case Studies */}

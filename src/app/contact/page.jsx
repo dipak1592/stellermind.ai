@@ -13,6 +13,8 @@ import Image from "next/image";
 import TubeLight from "@/components/TubeLight";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Head from "next/head";
+
 function Contact() {
   const [showPopup, setShowPopup] = useState(false);
   const [showErrPopup, setShowErrPopup] = useState(false);
@@ -130,6 +132,7 @@ function Contact() {
   };
   return (
     <>
+    
     <section className="pb-[60px] font-semibold text-white">
         <TubeLight />
         <div className="relative flex justify-center z-[5] pt-[60px]">
@@ -596,7 +599,7 @@ function Contact() {
               <div className="text-center">
                 <h2 className="text-lg font-semibold text-green-700 mb-3">Thank You! We Have Received Your Inquiry !</h2>
                 <hr />
-                <p className="mt-3"> We Appreciate you for Trusting <Link className="text-blue-700 underline underline-offset-4" href="https://betasource.tech/">StellarMind.</Link>  we will reach you out in 24 hrs.</p>
+                <p className="mt-3"> We Appreciate you for Trusting <Link className="text-blue-700 underline underline-offset-4" href="https://betasource.tech/">StellarMind.</Link>  we will reach you out in 24 hours.</p>
                 <div className="mt-3 flex justify-center">
                 <button onClick={() => setShowPopup(false)} className="flex  items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white  font-bold rounded">
                   Close
@@ -659,8 +662,8 @@ dangerouslySetInnerHTML={{
       "postalCode": "380054",
       "addressCountry": "IN",
     },
-    "headline": "Contact Stellarmind AI - Get in Touch for Custom AI and IoT Solutions",
-    "description": "Contact Stellarmind AI for custom AI/ML and IoT solutions. Let us help you transform your business with advanced technology.",
+    "headline": "Contact StellarMind | AI/ML, IoT, and Cloud Development Experts",
+    "description": "Get in touch with StellarMind for AI-powered automation, IoT solutions, and scalable cloud services tailored to your business needs. Let's innovate together.",
     "sameAs": [
       "https://www.facebook.com/stellarmind.ai",
       "https://twitter.com/stellarmind.ai",

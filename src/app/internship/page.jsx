@@ -9,6 +9,7 @@ import BlogError from "@/components/blogs/BlogError";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Pagination, Navigation } from "swiper";
+import Head from "next/head";
 
 // Install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
@@ -105,7 +106,32 @@ const InternshipPage = () => {
     },
   ];
   
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Stellarmind AI",
+    url: "https://stellarmind.ai/internship",
+    logo: "/stellarmind-logo.png",
+    description: "Kickstart your career in AI/ML and IoT with StellarMind’s internships. Gain hands-on experience in developing advanced AI and machine learning services integrated with IoT.",
+    sameAs: ["https://twitter.com/stellarmind", "https://www.linkedin.com/company/stellarmind"],
+    potentialAction: {
+      "@type": "ApplyAction",
+      target: "https://stellarmind.ai/apply",
+    },
+  };
+
   return (
+<>
+
+      <Head>
+        <title>AI/ML & IoT Internships | Join StellarMind’s Innovative Team</title>
+        <meta name="description" content="Kickstart your career in AI/ML and IoT with StellarMind’s internships. Gain hands-on experience in developing advanced AI and machine learning services integrated with IoT." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </Head>
+
     <div className="text-white font-sans">
       {/* Existing sections */}
       <section className="relative h-full flex flex-col md:flex-row overflow-hidden justify-center items-center">
@@ -355,6 +381,7 @@ const InternshipPage = () => {
         </Link>
       </section> */}
     </div>
+    </>
   );
 };
 

@@ -8,6 +8,7 @@ import Web from '@/components/Portfolios/Web';
 import TubeLight from '@/components/TubeLight';
 import { useState } from 'react';
 
+
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('All');
   const tabs = ['All', 'AI/ML', 'UNITY', 'AR', 'WEB', 'MOBILE'];
@@ -31,6 +32,51 @@ export default function Portfolio() {
 
   return (
     <>
+    {/* <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://stellarmind.ai/portfolio"
+            },
+            "headline": "Our AI/ML and IoT Success Stories | StellarMind Portfolio",
+            "description": "View StellarMind's portfolio showcasing custom IoT and AI applications, mobile apps with AI/ML integration, and scalable cloud solutions that drive business transformation.",
+            "author": {
+              "@type": "Organization",
+              "name": "StellarMind"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "StellarMind",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://stellarmind.ai/betalogo.png"
+              }
+            },
+            "blogPost": tabs.map(tab => ({
+              "@type": "portfolioPosting",
+              "headline": `${tab.name} portfolio Posts`,
+              "url": `https://stellarmind.ai/portfolio/${tab.name.toLowerCase()}`,
+              "description": `Find the latest ${tab.name} portfolio posts at StellarMind.`,
+              "author": {
+                "@type": "Organization",
+                "name": "StellarMind"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "StellarMind",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://stellarmind.ai"
+                }
+              }
+            }))
+          })}
+        </script>
+      </Head> */}
+
       <section className="pb-[40px] font-semibold text-white">
         <TubeLight />
         <div className="relative flex justify-center z-[5] pt-[60px]">
@@ -71,13 +117,13 @@ export default function Portfolio() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "Stellarmind AI Portfolio - Showcase of Cutting-Edge AI and IoT Solutions",
-            "description": "Explore Stellarmind AI’s portfolio of innovative projects in AI, ML, IoT, and cloud computing. Discover our success stories.",
+            "name": "Our AI/ML and IoT Success Stories | StellarMind Portfolio",
+            "description": "View StellarMind's portfolio showcasing custom IoT and AI applications, mobile apps with AI/ML integration, and scalable cloud solutions that drive business transformation.",
             "url": "https://stellarmind.ai/portfolio",
             "mainEntity": {
               "@type": "WebPage",
-              "name": "Digital Solutions Portfolio",
-              "description": "Our portfolio includes a range of digital solutions such as AI/ML projects, Unity applications, Augmented Reality experiences, Web development projects, and Mobile apps.",
+              "name": "Our AI/ML and IoT Success Stories | StellarMind Portfolio",
+              "description": "View StellarMind's portfolio showcasing custom IoT and AI applications, mobile apps with AI/ML integration, and scalable cloud solutions that drive business transformation.",
               "url": "https://stellarmind.ai/portfolio",
             },
             "hasPart": tabs.map((tab) => ({

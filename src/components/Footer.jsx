@@ -138,6 +138,15 @@ function Footer() {
                   <Link href="/portfolio">Portfolio</Link>
                 </div>
                 <div className="mb-[5px] hover:text-blue-500 hover:font-semibold">
+                  <Link href="/career">Career</Link>
+                </div>
+                <div className="mb-[5px] hover:text-blue-500 hover:font-semibold">
+                  <Link href="/blog">Blog</Link>
+                </div>
+                <div className="mb-[5px] hover:text-blue-500 hover:font-semibold">
+                  <Link href="/case-studies">Case Studies</Link>
+                </div>
+                <div className="mb-[5px] hover:text-blue-500 hover:font-semibold">
                   <Link href="/contact">Contact Us</Link>
                 </div>
               </div>

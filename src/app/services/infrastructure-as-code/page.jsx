@@ -12,8 +12,8 @@ import Image from 'next/image';
 import React from 'react'
 import { DiAndroid } from "react-icons/di";
 export const metadata = {
-  title: "Transforming Infrastructure: Unlock Efficiency with Infrastructure as Code by StellarMind.AI",
-  description: "From provisioning to management, we empower your infrastructure to adapt and evolve effortlessly. Let's revolutionize the way you build, deploy, and scale your digital assets.",
+  title: "Infrastructure as Code Solutions | StellarMind - Automation & Cloud Integration",
+  description: "Automate your cloud infrastructure with StellarMind’s Infrastructure as Code solutions, integrating AI/ML for seamless, scalable, and secure deployment.",
 };
 function page() {
   const services = [

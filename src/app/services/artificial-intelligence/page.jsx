@@ -9,8 +9,8 @@ import ServiceBox from "@/components/servicepage/ServiceBox";
 import AI from "@/components/technologies/AI";
 
 export const metadata = {
-  title: "Artificial Intelligence Services - Tailored AI Solutions for Enterprises",
-  description: "Leverage Stellarmind's AI expertise to implement custom AI solutions for your enterprise. Boost efficiency and drive growth with AI.",
+  title: "AI/ML Solutions for Business | StellarMind - Powering the Future of AI",
+  description: "Leverage StellarMind’s advanced AI and machine learning services to automate business processes, enhance predictive analytics, and build custom AI applications."
 };
 
 function page() {
@@ -115,8 +115,8 @@ function page() {
             "url": "https://stellarmind.ai/",
             "mainEntity": {
               "@type": "WebPage",
-              "name": "Artificial Intelligence & Machine Learning",
-              "description": "Explore StellarMind's AI & ML services, including Computer Vision, Natural Language Processing, Machine Learning Development, AI Consulting, Generative AI, and more.",
+              "name": "AI/ML Solutions for Business | StellarMind - Powering the Future of AI",
+              "description": "Leverage StellarMind’s advanced AI and machine learning services to automate business processes, enhance predictive analytics, and build custom AI applications.",
               "image": "/AI.avif",
             },
             "about": {

@@ -5,6 +5,8 @@ import { MdEmojiObjects } from "react-icons/md";
 import Link from "next/link";
 import DynamicHeading from "@/components/DynamicHeading";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
+import Head from "next/head";
+
 async function getData() {
   const res = await fetch(
     `https://ni9c33jq49.execute-api.ap-south-1.amazonaws.com/dev/api/career/getposts`, { next: { revalidate: 60 } } 
@@ -22,6 +24,43 @@ async function Career() {
   }
   return (
     <>
+    
+    <Head>
+        <title>Careers at StellarMind | AI/ML, IoT, and Automation Innovation</title>
+        <meta name="description" content="Join StellarMind’s team of AI/ML and IoT experts. Explore exciting career opportunities in AI-driven automation, custom IoT solutions, and scalable cloud technologies." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "JobPosting",
+              "title": "Join Our Dynamic Team",
+              "description": "Join StellarMind’s team of AI/ML and IoT experts. Explore exciting career opportunities in AI-driven automation, custom IoT solutions, and scalable cloud technologies.",
+              "url": "https://stellarmind.ai/career",
+              "datePosted": new Date().toISOString(),
+              "employmentType": "FULL_TIME",
+              "hiringOrganization": {
+                "@type": "Organization",
+                "name": "Stellarmind",
+                "sameAs": "https://stellarmind.ai",
+                "logo": "https://stellarmind.ai/logo.png" 
+              },
+              "jobLocation": {
+                "@type": "Place",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "1234 Main St",
+                  "addressLocality": "City",
+                  "addressRegion": "State",
+                  "postalCode": "12345",
+                  "addressCountry": "Country"
+                }
+              }
+            })
+          }}
+        />
+      </Head>
+
       <div className="grid container md:grid-cols-2 gap-[20px] ">
         <div className="relative pt-[90px] text-white">
           <h1 className="pb-3 text-[35px] xl:text-[50px] lg:text-[44px] md:text-[40px] sm:text-[40px] font-semibold">

@@ -11,8 +11,8 @@ import Image from 'next/image';
 import React from 'react'
 import { DiAndroid } from "react-icons/di";
 export const metadata = {
-  title: "Internet of Things Services - IoT Solutions for a Smarter World",
-  description: "Empower your business with IoT solutions from Stellarmind AI. Connect devices, collect data, and make smarter decisions with IoT.",
+  title: "Custom IoT Solutions | StellarMind - Innovating IoT & Cloud Integration",
+  description: "Unlock the full potential of IoT with StellarMind’s cloud-based IoT development, connected devices, and smart automation solutions tailored for your enterprise.",
 };
 function page() {
   const services = [

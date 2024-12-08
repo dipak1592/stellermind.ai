@@ -99,7 +99,29 @@ function Navbar() {
                 </Link>
               </div>
               <div>
+              <Link
+                  href="/case-studies"
+                  className={`${
+                    pathname === "/case-studies"
+                      ? "text-blue-500 bg-[#ffffff0e] "
+                      : ""
+                  } md:text-[15px] lg:text-[18px] font-medium  hover:bg-[#ffffff0e] hover:text-blue-500 rounded-lg p-2`}
+                >
+                  Case Studies
+                </Link>
+              </div>
+              <div>
                 <Link
+                  href="/internship"
+                  className={`${
+                    pathname === "/internship"
+                      ? "text-blue-500 bg-[#ffffff0e] "
+                      : ""
+                  } md:text-[15px] lg:text-[18px] font-medium  hover:bg-[#ffffff0e] hover:text-blue-500 rounded-lg p-2`}
+                >
+                  Internship
+                </Link>
+                {/* <Link
                   href="/career"
                   className={`${
                     pathname === "/career"
@@ -120,7 +142,7 @@ function Navbar() {
                   } md:text-[15px] lg:text-[18px] font-medium  hover:bg-[#ffffff0e] hover:text-blue-500 rounded-lg p-2`}
                 >
                   Blog
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

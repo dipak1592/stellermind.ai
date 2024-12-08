@@ -10,8 +10,8 @@ import TestimonialSlider from '@/components/slider/TestimonialSlider';
 import Image from 'next/image';
 import React from 'react'
 export const metadata = {
-  title: "Elevate Experiences: Unity Development Mastery with StellarMind.AI",
-  description: "Unlock the full potential of Unity with StellarMind.AI's expert development services. From captivating games to immersive simulations, we harness Unity's power to create unforgettable experiences.",
+  title: "Unity AI Solutions | StellarMind - Cutting-Edge AI for Real-Time Applications",
+  description: "Develop immersive experiences with StellarMind’s Unity AI solutions, bringing AI/ML innovation to real-time 3D applications and interactive environments.",
 };
 
 function page() {

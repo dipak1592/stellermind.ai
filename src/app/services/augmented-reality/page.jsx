@@ -14,8 +14,8 @@ import React from 'react'
 import { DiAndroid } from "react-icons/di";
 
 export const metadata = {
-  title: "Augmented Reality Services - Enhance Business Operations with AR",
-  description: "Enhance your business with Augmented Reality from Stellarmind AI, transforming operations with cutting-edge AR technology.",
+  title: "Augmented Reality Solutions | StellarMind - Bridging Physical and Digital",
+  description: "Empower your business with StellarMind’s AR solutions, merging AI/ML and IoT to create immersive experiences that bridge the physical and digital worlds.",
 };
 function page() {
   const services = [

@@ -18,8 +18,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import BlogWidget from "@/components/blogs/BlogWidget";
 import BlogError from "@/components/blogs/BlogError";
 import BrandSlider from "@/components/BrandSlider";
-
-
+import CaseStudyWidget from "@/components/caseStudy/caseStudyWidget"
+import CaseStudyError from "@/components/caseStudy/CaseStudyError";
 // Google Fonts
 const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700"],
@@ -53,6 +53,7 @@ async function getHomeBlogs() {
 const HomePage = () => {
   const [blogData, setBlogData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [caseStudyData, setCaseStudyData] = useState([]);
 
   useEffect(() => {
     let isMounted = true;
@@ -72,10 +73,41 @@ const HomePage = () => {
     };
   }, []);
 
+  const caseStudiesData = [
+    {
+      slug: 'enhancing-iot-capabilities',
+      title: 'Enhancing IoT Capabilities for View',
+      description: 'Enhanced IoT capabilities for View Inc. through comprehensive DevOps, cloud, mobile development, and 24/7 support, driving innovation and operational efficiency.',
+      image: '/case-study/EnhancingIot-1.jpg',
+    },
+    {
+      slug: 'interactive-ar-educational-app',
+      title: 'AR Educational App for Children',
+      description: 'Developed an interactive AR educational app for children, combining 3D characters, real-time AI interactions, and book-based learning for an engaging experience.',
+      image: '/case-study/arEducation-1.jpg',
+    },
+    {
+      slug: 'advanced-photo-and-video-editing',
+      title: 'Photo and Video Editing Mobile App',
+      description: 'Developed a custom mobile app for advanced photo and video editing with real-time effects, artistic filters, and Bitmoji integration, without using third-party SDKs.',
+      image: '/case-study/videoedit-1.jpg',
+    },
+  ];
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      setTimeout(() => {
+        setCaseStudyData(caseStudiesData);
+        setIsLoading(false);
+      }, 1000);
+    };
+
+    fetchData();
+  }, []);
 
   const tabs = [
-    { id: "AI/ML", label: "AI/ML" },
-    { id: "AR", label: "AR" },
+  { id: "AI/ML", label: "AI/ML" },
+  { id: "AR", label: "AR" },
   { id: "Backend", label: "Backend " },
   { id: "Frontend", label: "Frontend " },
   { id: "CMS", label: "CMS" },
@@ -94,6 +126,9 @@ const HomePage = () => {
       "https://twitter.com/StellarMind",
       "https://www.linkedin.com/company/StellarMind",
     ],
+    "headline": "StellarMind AI |Leading Chatbot, AI, ML & IoT Solutions",
+    "description": "StellarMind AI is a leading technology outsourcing company in India and the USA, specializing in enterprise software, mobile apps, custom chatbots, AI, ML, and IoT development, serving clients worldwide.",
+    headline:"",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+917863889382,16506670749", 
@@ -101,15 +136,24 @@ const HomePage = () => {
       "areaServed": "India, USA",
       "availableLanguage": "English",
     },
+    "publisher": {
+      "@type": "Organization",
+      "name": "StellarMind",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://stellarmind.ai"
+      }
+    }
   };
 
+  
   return (
     <>
       <Head>
-        <title>Stellarmind AI - AI/ML and IoT Solutions for Modern Enterprises</title>
+        <title>StellarMind AI |Leading Chatbot, AI, ML & IoT Solutions</title>
         <meta
           name="description"
-          content="Explore Stellarmind's AI/ML and IoT solutions, driving innovation in enterprises with cloud-powered mobile app development and automation services."
+          content="StellarMind AI is a leading technology outsourcing company in India and the USA, specializing in enterprise software, mobile apps, custom chatbots, AI, ML, and IoT development, serving clients worldwide."
         />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
@@ -222,6 +266,73 @@ const HomePage = () => {
 
       <HireDeveloper />
 
+      <section className="container lg:w-[90%] w-full px-4 py-5">
+      {/* Dynamic Heading for Case Studies */}
+      <DynamicHeading FirstContent={"Our"} FirstsubContent={"Case Studies"} />
+
+      {/* Display a loader if data is still loading, else display the case studies */}
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : caseStudyData.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Map over caseStudyData to display up to 3 case studies */}
+          {caseStudyData.slice(0, 3).map((caseStudy) => (
+            <CaseStudyWidget
+              key={caseStudy.slug}
+              slug={caseStudy.slug}
+              title={caseStudy.title}
+              description={caseStudy.description}
+              image={caseStudy.image}
+            />
+          ))}
+        </div>
+      ) : (
+        <CaseStudyError />
+      )}
+
+      {/* View All Case Studies button */}
+      <div className="flex justify-center mt-5">
+        <Link href={"/case-studies"}>
+          <button className="flex items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white font-bold rounded">
+            View All Case Studies <FaArrowRightLong />
+          </button>
+        </Link>
+      </div>
+      </section>
+
+      <section className="container lg:w-[90%] w-full px-4 py-5">
+        <DynamicHeading FirstContent={"Our"} FirstsubContent={"Blogs"} />
+
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : blogData.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogData.slice(0, 3).map((blog, index) => (
+              <BlogWidget
+                key={index}
+                featureImage={blog.featureImage}
+                updatedAt={blog.updatedAt}
+                category={blog.category}
+                title={blog.title}
+                content={blog.content}
+                id={blog._id}
+                slug={blog.slug}
+              />
+            ))}
+          </div>
+        ) : (
+          <BlogError />
+        )}
+
+        <div className="flex justify-center mt-5">
+          <Link href={"blog"}>
+            <button className="flex items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white font-bold rounded">
+              View All Blogs <FaArrowRightLong />
+            </button>
+          </Link>
+        </div>
+      </section>
+
       <section className="container mx-auto px-4 pt-10">
   <DynamicHeading FirstContent={"Internship"} FirstsubContent={"Opportunities"} />
   
@@ -263,48 +374,7 @@ const HomePage = () => {
       </button>
     </Link>
   </div>
-</section>
-
-
-
-
-
-
-
-
-      <section className="container lg:w-[90%] w-full px-4 py-5">
-        <DynamicHeading FirstContent={"Our"} FirstsubContent={"Blogs"} />
-
-        {isLoading ? (
-          <p>Loading...</p>
-        ) : blogData.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogData.slice(0, 3).map((blog, index) => (
-              <BlogWidget
-                key={index}
-                featureImage={blog.featureImage}
-                updatedAt={blog.updatedAt}
-                category={blog.category}
-                title={blog.title}
-                content={blog.content}
-                id={blog._id}
-                slug={blog.slug}
-              />
-            ))}
-          </div>
-        ) : (
-          <BlogError />
-        )}
-
-        <div className="flex justify-center mt-5">
-          <Link href={"blog"}>
-            <button className="flex items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white font-bold rounded">
-              View All Blogs <FaArrowRightLong />
-            </button>
-          </Link>
-        </div>
       </section>
-
       <div className="container">
         <CallToMeet />
       </div>

@@ -13,8 +13,8 @@ import React from 'react'
 import { DiAndroid } from "react-icons/di";
 
 export const metadata = {
-  title: "Unlock Mobile Excellence: StellarMind.AI's Innovative App Development Solutions",
-  description: "Empower your business with StellarMind.AI's mobile app development prowess. From sleek user interfaces to robust functionalities, our tailored solutions elevate your brand presence and engage users on the go.",
+  title: "AI/ML-Powered Mobile App Development | StellarMind - Innovating Mobile Solutions",
+  description: "Build cutting-edge mobile apps with StellarMind, integrating AI/ML and IoT for cloud-powered, cross-platform mobile solutions that drive digital transformation.",
 };
 function page() {
   const services = [

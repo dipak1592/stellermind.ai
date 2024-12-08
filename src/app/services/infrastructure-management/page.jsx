@@ -13,8 +13,8 @@ import React from 'react'
 import { DiAndroid } from "react-icons/di";
 
 export const metadata = {
-  title: "Empowering Your Digital Backbone: Infrastructure Management Services by StellarMind.AI",
-  description: "Optimize, secure, and scale your digital infrastructure with StellarMind.AI's expert management services.Let's elevate your infrastructure to new heights together.",
+  title: "Cloud Infrastructure Management | StellarMind - IoT-Enabled Solutions",
+  description: "Manage your connected devices and cloud infrastructure with StellarMind’s IoT-enabled solutions, ensuring scalability, security, and AI/ML-driven optimization.",
 };
 function page() {
   const services = [

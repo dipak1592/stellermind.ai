@@ -143,46 +143,111 @@ function InternshipPage() {
   const internshipData = {
     "ai-ml": {
       title: "AI/ML Internship at Stellarmind AI - Learn with Industry Leaders",
-      description:
-        "Kickstart your career in AI and ML with Stellarmind AI's internship, designed to offer real-world experience and industry insights.",
-
+      description:"Kickstart your career in AI and ML with Stellarmind AI's internship, designed to offer real-world experience and industry insights.",
       image: "/ai-ml.jpg",
+      duration: "3-6 months",
+      location: "Remote or On-site",
+      skills: ["Deep Learning", "Natural Language Processing", "Computer Vision", "Python", "TensorFlow"],
+      requirements: "Basic knowledge of Python and machine learning concepts.",
+      benefits: [
+        "Hands-on experience with industry-standard tools and techniques",
+        "Networking opportunities with professionals in the field",
+        "Access to exclusive workshops and seminars"
+    ],
+    applicationProcess: "Submit your resume and a cover letter via our website. Shortlisted candidates will be invited for an interview.",
+    careerProspects: "Opportunities for full-time roles in AI/ML after successful completion of the internship."
+
     },
     "fullstack-development": {
       title: "Fullstack Development Internship at Stellarmind AI - Become a Versatile Developer",
-      description:
-        "Develop your skills in both frontend and backend technologies with Stellarmind AI’s fullstack development internship, designed for versatility.",
+      description: "Develop your skills in both frontend and backend technologies with Stellarmind AI’s fullstack development internship, designed for versatility.",
       image: "/fullstack.jpg",
+      duration: "3-6 months",
+      location: "Remote or On-site",
+      skills: ["React", "Node.js", "MongoDB", "Express.js", "JavaScript", "HTML", "CSS"],
+      requirements: "Basic understanding of HTML, CSS, JavaScript, and some backend experience.",
+      benefits: [
+        "Hands-on experience in fullstack development projects",
+        "Mentorship from experienced developers",
+        "Certificate of completion",
+        "Opportunities to contribute to open-source projects"
+      ],
+      applicationProcess: "Submit your resume and a portfolio of past projects via our website. Shortlisted candidates will be contacted for a technical interview.",
+      careerProspects: "Potential for full-time employment in fullstack development roles post-internship."
     },
     "cyber-security": {
       title: "Cybersecurity Internship at Stellarmind AI - Secure the Future",
-      description:
-        "Stellarmind AI’s cybersecurity internship offers a chance to learn the essentials of securing digital infrastructures and protecting data.",
+      description: "Stellarmind AI’s cybersecurity internship offers a chance to learn the essentials of securing digital infrastructures and protecting data.",
       image: "/cyber-security.jpg",
+      duration: "4-6 months",
+      location: "Remote",
+      skills: ["Network Security", "Cryptography", "Penetration Testing", "Python", "Wireshark"],
+      requirements: "Familiarity with basic networking concepts and a passion for cybersecurity.",
+      benefits: [
+        "Exposure to real-world cybersecurity challenges",
+        "Opportunities to participate in CTF (Capture the Flag) events",
+        "Networking with industry experts",
+        "Access to cybersecurity certification resources"
+      ],
+      applicationProcess: "Submit your resume and a short write-up on your interest in cybersecurity via our website. Selected candidates will be invited for an interview.",
+      careerProspects: "Opportunities to join Stellarmind AI's cybersecurity team as a security analyst or researcher."
     },
     "frontend-development": {
       title: "Frontend Development Internship at Stellarmind AI - Master Web Technologies",
-      description:
-        "Master frontend development with Stellarmind AI’s internship, where you will work on real-world projects and learn modern web technologies.",
+      description: "Master frontend development with Stellarmind AI’s internship, where you will work on real-world projects and learn modern web technologies.",
       image: "/frontend.jpg",
+      duration: "3-5 months",
+      location: "Remote or On-site",
+      skills: ["React", "JavaScript", "HTML", "CSS", "Responsive Design"],
+      requirements: "Basic knowledge of HTML, CSS, and JavaScript.",
+      benefits: [
+        "Work on dynamic and responsive web applications",
+        "Mentorship from senior frontend developers",
+        "Certificate of completion",
+        "Participation in UI/UX design workshops"
+      ],
+      applicationProcess: "Submit your resume along with links to your GitHub projects via our website. Shortlisted candidates will be contacted for a coding challenge.",
+      careerProspects: "Prospects for frontend developer roles upon successful completion of the internship."
     },
     "backend-development": {
       title: "Backend Development Internship at Stellarmind AI - Enhance Your Coding Skills",
-      description:
-        "Join the Stellarmind AI backend development internship to sharpen your coding skills and contribute to cutting-edge backend technologies.",
+      description: "Join the Stellarmind AI backend development internship to sharpen your coding skills and contribute to cutting-edge backend technologies.",
       image: "/backend.jpg",
+      duration: "3-6 months",
+      location: "Remote or On-site",
+      skills: ["Node.js", "Express.js", "MongoDB", "RESTful APIs", "Database Management"],
+      requirements: "Basic understanding of backend development and databases.",
+      benefits: [
+        "Hands-on experience with scalable backend systems",
+        "Access to cloud infrastructure tools",
+        "Opportunities to work on high-impact projects",
+        "Mentorship and guidance from experienced backend engineers"
+      ],
+      applicationProcess: "Submit your resume and a GitHub link to your backend projects via our website. Shortlisted candidates will be invited for an interview.",
+      careerProspects: "Opportunities to join Stellarmind AI as a backend developer post-internship."
     },
     devops: {
       title: "DevOps Internship at Stellarmind AI - Build the Future of Continuous Delivery",
-      description:
-        "Stellarmind AI offers a DevOps internship to help you master continuous integration and deployment strategies in the real world.",
+      description: "Stellarmind AI offers a DevOps internship to help you master continuous integration and deployment strategies in the real world.",
       image: "/devops.jpg",
-    },
-    // Add more internships here...
+      duration: "4-6 months",
+      location: "Remote",
+      skills: ["CI/CD", "Docker", "Kubernetes", "AWS", "Automation"],
+      requirements: "Understanding of basic Linux commands and scripting.",
+      benefits: [
+        "Experience with containerization and orchestration tools",
+        "Hands-on with cloud infrastructure",
+        "Exposure to real-world DevOps challenges",
+        "Networking opportunities with DevOps professionals"
+      ],
+      applicationProcess: "Submit your resume and a cover letter explaining your interest in DevOps via our website. Selected candidates will be invited for a technical interview.",
+      careerProspects: "Potential for a DevOps engineer role at Stellarmind AI after internship completion."
+    }
+    
   };
 
   const params = useParams();
-  const { slug } = params;
+  const { slug } = params;  
   const internship = internshipData[slug];
 
   useEffect(() => {
@@ -193,6 +258,9 @@ function InternshipPage() {
       if (isMounted) {
         setBlogData(blogs);
         setIsLoading(false);
+        if (blogs.length === 0) {
+          setIsLoadingBlogs(false); // Indicate an empty state
+        }
       }
     }
 
@@ -245,7 +313,31 @@ function InternshipPage() {
               className="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
             />
           </div>
-          <div className="w-full md:w-3/5 md:ml-8 md:mt-0 p-6 rounded-lg">
+          <div className="w-full md:w-3/5 md:ml-8 md:mt-0 p-6 rounded-lg ">
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">Duration</b> :- {internship.duration}</p>
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">Location</b> :- {internship.location}</p>
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">Skills</b> :- {internship.skills.join(', ')}</p>
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">Requirements</b> :- {internship.requirements}</p>
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">ApplicationProcess</b> :- {internship.applicationProcess}</p>
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">CareerProspects</b> :- {internship.careerProspects}</p>
+            <p className="mb-2"><b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text">CareerProspects</b> :- {internship.benefits.join(',  ')}</p>
+
+            {/* <ul className="pt-9 list-none text-white gap-4">
+              {Object.entries(internship).map(([key, value], index) => (
+                <li key={index} className="flex items-center mb-2 gap-2 text-[14px] sm:text-[16px] md:text-xl">
+                  <span className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white mr-2">
+                    ✓
+                  </span>
+                  <span className="flex-1">
+                    <b className="bg-gradient-to-r from-blue-600 to-green-500 inline-block text-transparent bg-clip-text capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                    </b>
+                    : {Array.isArray(value) ? value.join(', ') : value}
+                  </span>
+                </li>
+              ))}
+            </ul> */}
+
             <p className="text-lg mb-4 text-white">{internship.description}</p>
             <Link href="mailto:hr@stellarmind.ai">
               <button className="flex  items-center border border-gray-500 text-[18px] gap-2 py-2 px-4 bg-gradient-to-r from-[#3b83f631] to-[#00800038] hover:border hover:border-white text-white  font-bold rounded">
